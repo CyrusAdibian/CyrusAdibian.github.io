@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NetGuard — WordPress Security Suite</title>
+  <meta name="description" content="NetGuard protects your WordPress site with real-time threat detection, malware scanning, vulnerability assessment, and authentication hardening.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Vazirmatn:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav container">
+      <a href="#" class="nav__logo">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+        NetGuard
+      </a>
+      <button class="nav__toggle" aria-label="Toggle menu" data-i18n-aria="nav.toggleMenu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav__links">
+        <a href="#features" data-i18n="nav.features">Features</a>
+        <a href="#modules" data-i18n="nav.modules">Modules</a>
+        <a href="#buy" data-i18n="nav.buy">Buy</a>
+        <div class="lang-switch" role="group" aria-label="Switch language" data-i18n-aria="nav.switchLang">
+          <button class="lang-switch__btn active" data-lang="en" type="button">EN</button>
+          <button class="lang-switch__btn" data-lang="fa" type="button">FA</button>
+        </div>
+        <a href="https://rastchin.com" class="btn btn--primary btn--sm" target="_blank" rel="noopener" data-i18n="nav.buyRastchin">Buy from Rastchin</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <span class="hero__badge" data-i18n="hero.badge">WordPress Security Suite</span>
+          <h1 class="hero__title">
+            <span data-i18n="hero.title">Protect your site with</span>
+            <span class="hero__highlight" data-i18n="hero.titleHighlight">intelligent security</span>
+          </h1>
+          <p class="hero__desc" data-i18n="hero.desc">NetGuard delivers real-time threat detection, malware scanning, vulnerability assessment, and authentication hardening — all from a single WordPress plugin.</p>
+          <div class="hero__actions">
+            <a href="https://rastchin.com" class="btn btn--primary" target="_blank" rel="noopener" data-i18n="hero.ctaPrimary">Buy from Rastchin</a>
+            <a href="#modules" class="btn btn--outline" data-i18n="hero.ctaSecondary">Explore Modules</a>
+          </div>
+        </div>
+        <div class="hero__visual">
+          <div class="hero__phone">
+            <img src="assets/dashboard-mobile.png" alt="NetGuard Security Dashboard" data-i18n-alt="hero.imageAlt" width="788" height="1394">
+          </div>
+          <div class="hero__float hero__float--score">
+            <span class="hero__float-value">90</span>
+            <span class="hero__float-label" data-i18n="hero.scoreLabel">Security Score</span>
+          </div>
+          <div class="hero__float hero__float--threats">
+            <span class="hero__float-value">48</span>
+            <span class="hero__float-label" data-i18n="hero.threatsLabel">Threats Blocked</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="container stats__grid">
+        <div class="stat">
+          <span class="stat__value" data-count="48">0</span>
+          <span class="stat__label" data-i18n="stats.threats">Threats blocked today</span>
+        </div>
+        <div class="stat">
+          <span class="stat__value" data-count="28123">0</span>
+          <span class="stat__label" data-i18n="stats.files">Files scanned</span>
+        </div>
+        <div class="stat">
+          <span class="stat__value" data-count="12">0</span>
+          <span class="stat__label" data-i18n="stats.modules">Security modules</span>
+        </div>
+        <div class="stat">
+          <span class="stat__value" data-count="99">0</span>
+          <span class="stat__suffix">%</span>
+          <span class="stat__label" data-i18n="stats.uptime">Uptime reliability</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <div class="container">
+        <div class="section-header">
+          <h2 data-i18n="features.title">Everything your WordPress site needs</h2>
+          <p data-i18n="features.subtitle">A complete security platform built for modern WordPress deployments.</p>
+        </div>
+        <div class="features__grid">
+          <article class="feature-card">
+            <div class="feature-card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 data-i18n="features.realtime.title">Real-time Protection</h3>
+            <p data-i18n="features.realtime.desc">Block malicious traffic, brute-force attacks, and suspicious requests before they reach your site.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            </div>
+            <h3 data-i18n="features.scanner.title">File Scanning</h3>
+            <p data-i18n="features.scanner.desc">Scan every file in your WordPress installation for malware, backdoors, and suspicious code patterns.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg>
+            </div>
+            <h3 data-i18n="features.vuln.title">Vulnerability Assessment</h3>
+            <p data-i18n="features.vuln.desc">Detect outdated core, plugins, and themes with severity-ranked findings and remediation guidance.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+            <h3 data-i18n="features.auth.title">Auth Hardening</h3>
+            <p data-i18n="features.auth.desc">Two-factor authentication, session tracking, device trust, and login anomaly detection.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="modules" id="modules">
+      <div class="container">
+        <div class="section-header">
+          <h2 data-i18n="modules.title">12 integrated security modules</h2>
+          <p data-i18n="modules.subtitle">One unified dashboard for every layer of WordPress protection.</p>
+        </div>
+        <div class="modules__layout">
+          <nav class="module-nav" id="module-nav"></nav>
+          <div class="module-panel" id="module-panel"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="buy">
+      <div class="container cta__inner cta__inner--buy">
+        <div class="cta__content">
+          <h2 data-i18n="cta.title">Ready to secure your WordPress site?</h2>
+          <p data-i18n="cta.subtitle">Get NetGuard from Rastchin — Iran's trusted source for WordPress plugins and themes.</p>
+        </div>
+        <div class="cta__buy">
+          <a href="https://rastchin.com" class="btn btn--primary btn--lg" target="_blank" rel="noopener" data-i18n="cta.buy">Buy from Rastchin</a>
+          <p class="cta__note" data-i18n="cta.note">Secure checkout · Free updates after purchase · Official support</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+        <span>NetGuard</span>
+      </div>
+      <p class="footer__copy" data-i18n="footer.copy">© 2026 NetGuard. WordPress Security Suite.</p>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/modules.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
