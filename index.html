@@ -9,10 +9,23 @@
   <link rel="apple-touch-icon" href="NetGuard/assets/icon.png">
   <style>
     body { font-family: 'Yekan', Tahoma, sans-serif; }
+    html[dir="rtl"] [lang="en"],
+    html[dir="ltr"] [lang="fa"] { display: none; }
   </style>
-  <script>location.replace('NetGuard/');</script>
+  <script>
+    (function () {
+      var lang = localStorage.getItem('netguard-language') === 'en' ? 'en' : 'fa';
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'en' ? 'ltr' : 'rtl';
+      document.title = lang === 'en' ? 'NetGuard' : 'نت‌گارد';
+      location.replace('NetGuard/');
+    })();
+  </script>
 </head>
 <body>
-  <p>در حال انتقال به <a href="NetGuard/">نت‌گارد</a>…</p>
+  <p>
+    <span lang="fa" dir="rtl">در حال انتقال به <a href="NetGuard/">نت‌گارد</a>…</span>
+    <span lang="en" dir="ltr">Redirecting to <a href="NetGuard/">NetGuard</a>...</span>
+  </p>
 </body>
 </html>
