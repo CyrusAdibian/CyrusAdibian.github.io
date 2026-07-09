@@ -1,70 +1,67 @@
-document.addEventListener('DOMContentLoaded', () => {
-  initI18n();
-  initModules();
-  initNav();
-  initCounters();
-  initScrollAnimations();
-});
+(function () {
+  'use strict';
 
-function initNav() {
-  const toggle = document.querySelector('.nav__toggle');
-  const links = document.querySelector('.nav__links');
-
-  toggle?.addEventListener('click', () => {
-    links?.classList.toggle('open');
-    toggle.classList.toggle('open');
-  });
-
-  links?.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => links.classList.remove('open'));
-  });
-}
-
-function initCounters() {
-  const counters = document.querySelectorAll('[data-count]');
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      const el = entry.target;
-      const target = parseInt(el.dataset.count, 10);
-      animateCounter(el, target);
-      observer.unobserve(el);
-    });
-  }, { threshold: 0.5 });
-
-  counters.forEach(c => observer.observe(c));
-}
-
-function animateCounter(el, target) {
-  const duration = 1500;
-  const start = performance.now();
-
-  function update(now) {
-    const progress = Math.min((now - start) / duration, 1);
-    const eased = 1 - Math.pow(1 - progress, 3);
-    el.textContent = Math.floor(eased * target).toLocaleString();
-    if (progress < 1) requestAnimationFrame(update);
+  // Switchboard animation (NetGuard 2.0 card)
+  const switchboard = document.getElementById('switchboard');
+  if (switchboard) {
+    const lights = [];
+    for (let i = 0; i < 90; i++) {
+      const span = document.createElement('span');
+      switchboard.appendChild(span);
+      lights.push(span);
+    }
+    function animateLights() {
+      lights.forEach(l => l.classList.remove('on'));
+      const count = Math.floor(Math.random() * 8) + 3;
+      for (let i = 0; i < count; i++) {
+        const idx = Math.floor(Math.random() * lights.length);
+        lights[idx].classList.add('on');
+      }
+    }
+    animateLights();
+    setInterval(animateLights, 400);
   }
 
-  requestAnimationFrame(update);
-}
+  // Streaming tabs
+  const tabs = document.querySelectorAll('.streaming__tab');
+  const preview = document.getElementById('streaming-preview');
+  const cards = document.querySelectorAll('.streaming-card');
 
-function initScrollAnimations() {
-  const elements = document.querySelectorAll(
-    '.feature-card, .section-header, .stat, .cta__inner, .modules__layout'
-  );
-
-  elements.forEach(el => el.classList.add('fade-in'));
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      if (preview) {
+        const size = tab.dataset.tab;
+        preview.dataset.size = size === 'original' ? '' : size;
       }
     });
-  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+  });
 
-  elements.forEach(el => observer.observe(el));
-}
+  // Auto-rotate streaming cards
+  let cardIndex = 0;
+  setInterval(() => {
+    if (cards.length === 0) return;
+    cardIndex = (cardIndex + 1) % cards.length;
+    cards.forEach((c, i) => c.classList.toggle('active', i === cardIndex));
+  }, 5000);
+
+  // Mobile menu
+  const menuBtn = document.querySelector('.nav__menu');
+  const navLinks = document.querySelector('.nav__links');
+  if (menuBtn && navLinks) {
+    menuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('nav__links--open');
+      const open = navLinks.classList.contains('nav__links--open');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!navLinks.classList.contains('nav__links--open')) return;
+      if (!e.target.closest('.nav')) {
+        navLinks.classList.remove('nav__links--open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+})();

@@ -1,173 +1,434 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="fa" dir="rtl" class="dark-theme">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NetGuard — WordPress Security Suite</title>
-  <meta name="description" content="NetGuard protects your WordPress site with real-time threat detection, malware scanning, vulnerability assessment, and authentication hardening.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Vazirmatn:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>نت‌گارد — مجموعه امنیتی وردپرس</title>
+  <meta name="description" content="نت‌گارد یک مجموعه امنیتی ماژولار برای وردپرس است با WAF، اسکنر بدافزار، Zero Trust، SIEM و داشبورد مدیریتی React.">
+  <link rel="icon" href="assets/icon.png" type="image/png" sizes="512x512">
+  <link rel="apple-touch-icon" href="assets/icon.png">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  
   <header class="header">
-    <nav class="nav container">
-      <a href="#" class="nav__logo">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-        </svg>
-        NetGuard
+    <nav class="nav">
+      <a href="index.html" class="nav__logo" aria-label="رفتن به صفحه اصلی">
+        <img src="assets/icon.png" alt="" width="44" height="44" class="site-icon">
+        <span>نت‌گارد</span>
       </a>
-      <button class="nav__toggle" aria-label="Toggle menu" data-i18n-aria="nav.toggleMenu">
-        <span></span><span></span><span></span>
-      </button>
       <div class="nav__links">
-        <a href="#features" data-i18n="nav.features">Features</a>
-        <a href="#modules" data-i18n="nav.modules">Modules</a>
-        <a href="#buy" data-i18n="nav.buy">Buy</a>
-        <div class="lang-switch" role="group" aria-label="Switch language" data-i18n-aria="nav.switchLang">
-          <button class="lang-switch__btn active" data-lang="en" type="button">EN</button>
-          <button class="lang-switch__btn" data-lang="fa" type="button">FA</button>
-        </div>
-        <a href="https://rastchin.com" class="btn btn--primary btn--sm" target="_blank" rel="noopener" data-i18n="nav.buyRastchin">Buy from Rastchin</a>
+        <a href="installation-guide.html">نصب</a>
+        <a href="troubleshooting.html">عیب‌یابی</a>
+      </div>
+      <div class="nav__actions">
+        <a href="https://rastchin.com" class="btn btn--outline btn--sm" target="_blank" rel="noopener">خرید از راست‌چین</a>
+        <button class="nav__menu" aria-label="باز کردن منو" type="button"><span class="material-symbols-outlined" aria-hidden="true">menu</span></button>
       </div>
     </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="container hero__grid">
-        <div class="hero__content">
-          <span class="hero__badge" data-i18n="hero.badge">WordPress Security Suite</span>
-          <h1 class="hero__title">
-            <span data-i18n="hero.title">Protect your site with</span>
-            <span class="hero__highlight" data-i18n="hero.titleHighlight">intelligent security</span>
-          </h1>
-          <p class="hero__desc" data-i18n="hero.desc">NetGuard delivers real-time threat detection, malware scanning, vulnerability assessment, and authentication hardening — all from a single WordPress plugin.</p>
-          <div class="hero__actions">
-            <a href="https://rastchin.com" class="btn btn--primary" target="_blank" rel="noopener" data-i18n="hero.ctaPrimary">Buy from Rastchin</a>
-            <a href="#modules" class="btn btn--outline" data-i18n="hero.ctaSecondary">Explore Modules</a>
+  <main class="page">
+    
+    <section class="intro">
+      <div class="intro__header" aria-hidden="true">
+        <div class="intro__line intro__line--v intro__line--left" data-fade="top"></div>
+        <div class="intro__line intro__line--v intro__line--right" data-fade="top"></div>
+      </div>
+      <div class="intro__body intro__line--top">
+        <svg class="intro__circle intro__circle--tl" aria-hidden="true" fill="none" height="75" viewBox="0 0 75 75" width="75"><path d="M74 37.5C74 30.281 71.8593 23.2241 67.8486 17.2217C63.838 11.2193 58.1375 6.541 51.4679 3.7784C44.7984 1.0158 37.4595 0.292977 30.3792 1.70134C23.2989 3.1097 16.7952 6.58599 11.6906 11.6906C6.58599 16.7952 3.1097 23.2989 1.70134 30.3792C0.292977 37.4595 1.0158 44.7984 3.7784 51.4679C6.541 58.1375 11.2193 63.838 17.2217 67.8486C23.2241 71.8593 30.281 74 37.5 74" opacity="var(--line-opacity)" stroke="url(#gc-tl)" stroke-dasharray="2 2"/><defs><radialGradient cx="0" cy="0" gradientTransform="translate(37.5 37.5) rotate(90) scale(36.5)" gradientUnits="userSpaceOnUse" id="gc-tl" r="1"><stop/><stop offset="0.5" stop-opacity="0.34"/><stop offset="1"/></radialGradient></defs></svg>
+        <div class="intro__line intro__line--v intro__line--left" data-fade="true" data-offset="true"></div>
+
+        <h1 class="intro__title intro__line--bottom">
+          مجموعه امنیتی وردپرس <span class="intro__break"></span>برای وب
+          <svg class="intro__circle intro__circle--br" aria-hidden="true" fill="none" height="75" viewBox="0 0 75 75" width="75"><path d="M74 37.5C74 30.281 71.8593 23.2241 67.8486 17.2217C63.838 11.2193 58.1375 6.541 51.4679 3.7784C44.7984 1.0158 37.4595 0.292977 30.3792 1.70134C23.2989 3.1097 16.7952 6.58599 11.6906 11.6906C6.58599 16.7952 3.1097 23.2989 1.70134 30.3792C0.292977 37.4595 1.0158 44.7984 3.7784 51.4679C6.541 58.1375 11.2193 63.838 17.2217 67.8486C23.2241 71.8593 30.281 74 37.5 74" opacity="var(--line-opacity)" stroke="url(#gc-br)" stroke-dasharray="2 2"/><defs><radialGradient cx="0" cy="0" gradientTransform="translate(37.5 37.5) rotate(90) scale(36.5)" gradientUnits="userSpaceOnUse" id="gc-br" r="1"><stop/><stop offset="0.5" stop-opacity="0.34"/><stop offset="1"/></radialGradient></defs></svg>
+        </h1>
+
+        <div class="intro__subtitle intro__line--bottom">
+          <p>نت‌گارد یک پلتفرم امنیتی ماژولار برای وردپرس است با <strong>داشبورد مدیریتی ری‌اکت</strong>، رابط REST API، فایروال WAF، اسکنر بدافزار، زیروتراست و SIEM.</p>
+        </div>
+
+        <div class="intro__footer intro__line--bottom">
+          <div class="intro__buttons">
+            <div class="intro__line intro__line--v intro__line--left" data-fade="true" data-offset="true"></div>
+            <div class="intro__line intro__line--v intro__line--right" data-fade="true" data-offset="true"></div>
+            <svg class="intro__circle intro__circle--br-sm" aria-hidden="true" fill="none" height="75" viewBox="0 0 75 75" width="75"><path d="M74 37.5C74 30.281 71.8593 23.2241 67.8486 17.2217C63.838 11.2193 58.1375 6.541 51.4679 3.7784C44.7984 1.0158 37.4595 0.292977 30.3792 1.70134C23.2989 3.1097 16.7952 6.58599 11.6906 11.6906C6.58599 16.7952 3.1097 23.2989 1.70134 30.3792C0.292977 37.4595 1.0158 44.7984 3.7784 51.4679C6.541 58.1375 11.2193 63.838 17.2217 67.8486C23.2241 71.8593 30.281 74 37.5 74" opacity="var(--line-opacity)" stroke="url(#gc-br2)" stroke-dasharray="2 2"/><defs><radialGradient cx="0" cy="0" gradientTransform="translate(37.5 37.5) rotate(90) scale(36.5)" gradientUnits="userSpaceOnUse" id="gc-br2" r="1"><stop/><stop offset="0.5" stop-opacity="0.34"/><stop offset="1"/></radialGradient></defs></svg>
+            <div class="intro__cta">
+              <a href="https://rastchin.com" class="btn btn--primary" target="_blank" rel="noopener">شروع کنید</a>
+              <a href="#features" class="btn btn--outline">آشنایی با نت‌گارد</a>
+            </div>
           </div>
         </div>
-        <div class="hero__visual">
-          <div class="hero__phone">
-            <img src="assets/dashboard-mobile.png" alt="NetGuard Security Dashboard" data-i18n-alt="hero.imageAlt" width="788" height="1394">
-          </div>
-          <div class="hero__float hero__float--score">
-            <span class="hero__float-value">90</span>
-            <span class="hero__float-label" data-i18n="hero.scoreLabel">Security Score</span>
-          </div>
-          <div class="hero__float hero__float--threats">
-            <span class="hero__float-value">48</span>
-            <span class="hero__float-label" data-i18n="hero.threatsLabel">Threats Blocked</span>
-          </div>
-        </div>
+
+        <div class="intro__line intro__line--v intro__line--right" data-fade="true" data-offset="true"></div>
       </div>
     </section>
 
-    <section class="stats">
-      <div class="container stats__grid">
-        <div class="stat">
-          <span class="stat__value" data-count="48">0</span>
-          <span class="stat__label" data-i18n="stats.threats">Threats blocked today</span>
-        </div>
-        <div class="stat">
-          <span class="stat__value" data-count="28123">0</span>
-          <span class="stat__label" data-i18n="stats.files">Files scanned</span>
-        </div>
-        <div class="stat">
-          <span class="stat__value" data-count="12">0</span>
-          <span class="stat__label" data-i18n="stats.modules">Security modules</span>
-        </div>
-        <div class="stat">
-          <span class="stat__value" data-count="99">0</span>
-          <span class="stat__suffix">%</span>
-          <span class="stat__label" data-i18n="stats.uptime">Uptime reliability</span>
-        </div>
-      </div>
-    </section>
-
+    
     <section class="features" id="features">
-      <div class="container">
-        <div class="section-header">
-          <h2 data-i18n="features.title">Everything your WordPress site needs</h2>
-          <p data-i18n="features.subtitle">A complete security platform built for modern WordPress deployments.</p>
+      <div class="features__main">
+        <div class="features__heading">
+          <h2 data-main-heading>نت‌گارد چه امکاناتی دارد؟</h2>
+          <p data-main-paragraph>چهارده ماژول مدیریتی، هفت سرویس هسته پلتفرم و یک لایه امنیتی یکپارچه برای وردپرس.</p>
         </div>
-        <div class="features__grid">
-          <article class="feature-card">
-            <div class="feature-card__icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            </div>
-            <h3 data-i18n="features.realtime.title">Real-time Protection</h3>
-            <p data-i18n="features.realtime.desc">Block malicious traffic, brute-force attacks, and suspicious requests before they reach your site.</p>
-          </article>
-          <article class="feature-card">
-            <div class="feature-card__icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-            </div>
-            <h3 data-i18n="features.scanner.title">File Scanning</h3>
-            <p data-i18n="features.scanner.desc">Scan every file in your WordPress installation for malware, backdoors, and suspicious code patterns.</p>
-          </article>
-          <article class="feature-card">
-            <div class="feature-card__icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg>
-            </div>
-            <h3 data-i18n="features.vuln.title">Vulnerability Assessment</h3>
-            <p data-i18n="features.vuln.desc">Detect outdated core, plugins, and themes with severity-ranked findings and remediation guidance.</p>
-          </article>
-          <article class="feature-card">
-            <div class="feature-card__icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            </div>
-            <h3 data-i18n="features.auth.title">Auth Hardening</h3>
-            <p data-i18n="features.auth.desc">Two-factor authentication, session tracking, device trust, and login anomaly detection.</p>
-          </article>
+        <div class="features__grid features__grid--3">
+          
+          <div class="features__col">
+            <a class="feature-card feature-card--sketch" href="#core">
+              <div data-illustration data-sketch="api"></div>
+              <div data-title>رابط REST API</div>
+              <div data-subtitle>اندپوینت‌های <code>netguard/v1</code> برای همه ماژول‌ها؛ ادغام فایروال، اسکن، رویداد، تنظیمات و مانیتورینگ از هر کلاینت یا اتوماسیون.</div>
+            </a>
+            <a class="feature-card feature-card--sketch" href="#core">
+              <div data-illustration data-sketch="events"></div>
+              <div data-title>سیستم رویداد</div>
+              <div data-subtitle>اتوبوس رویداد داخلی متصل به هوک‌های وردپرس؛ هر ماژول می‌تواند رویداد امنیتی منتشر و دریافت کند.</div>
+            </a>
+            <a class="feature-card feature-card--sketch" href="#core">
+              <div data-illustration data-sketch="error"></div>
+              <div data-title>مدیریت خطا</div>
+              <div data-subtitle>بررسی‌های نصب، رابط خطای تیره با مراحل رفع، و عیب‌یابی هدایت‌شده هنگام پیکربندی نادرست یا کمبود وابستگی‌ها.</div>
+            </a>
+            <a class="feature-card feature-card--sketch" href="#core">
+              <div data-illustration data-sketch="integrity"></div>
+              <div data-title>یکپارچگی افزونه</div>
+              <div data-subtitle>بررسی SHA-256 بر اساس مانیفست و خط مبنا در زمان اجرا برای تشخیص تغییر فایل‌های افزونه قبل از آسیب به سایت.</div>
+            </a>
+            <a class="feature-card feature-card--sketch" href="#core">
+              <div data-illustration data-sketch="cron"></div>
+              <div data-title>لاگ ساختاریافته و کران</div>
+              <div data-subtitle>اسکن بدافزار، بررسی یکپارچگی و پاک‌سازی لاگ‌ها در پس‌زمینه با کران وردپرس؛ لاگ‌های ساختاریافته و قابل جست‌وجو.</div>
+            </a>
+            <a class="feature-card feature-card--sketch" href="#core">
+              <div data-illustration data-sketch="license"></div>
+              <div data-title>لایسنس و به‌روزرسانی</div>
+              <div data-subtitle>پشتیبانی از لایسنس RTL، ionCube Loader و مدیریت به‌روزرسانی؛ آماده برای زمان فعال‌سازی لایسنس.</div>
+            </a>
+            <a class="feature-card feature-card--sketch" href="#authentication">
+              <div data-illustration data-sketch="auth"></div>
+              <div data-title>احراز هویت و دسترسی</div>
+              <div data-subtitle>محافظت در برابر بروت‌فورس، ردیابی تلاش ورود، قفل IP، احراز هویت دومرحله‌ای TOTP، پایش نشست و اثرانگشت دستگاه.</div>
+            </a>
+          </div>
+
+          
+          <div class="features__col">
+            <a class="feature-card feature-card--sketch" href="#dashboard">
+              <div data-illustration data-sketch="dashboard"></div>
+              <div data-title>داشبورد و نمای کلی</div>
+              <div data-subtitle>امتیاز امنیت، شاخص‌های کلیدی، وضعیت ماژول‌ها، رویدادهای زنده و بررسی سلامت سیستم در یک نگاه.</div>
+            </a>
+            <a class="feature-card feature-card--sketch" href="#firewall">
+              <div data-illustration data-sketch="firewall"></div>
+              <div data-title>فایروال (WAF)</div>
+              <div data-subtitle>تشخیص SQLi، XSS، RCE و Path Traversal؛ مسدودسازی آپلود مخرب، فیلتر بات بد، محافظت XML-RPC، رتبه‌بندی IP و محدودسازی نرخ.</div>
+            </a>
+            <a class="feature-card feature-card--callout" href="#dashboard">
+              <div data-illustration data-sketch="react"></div>
+              <div data-title>داشبورد مدیریتی ری‌اکت</div>
+              <div data-subtitle>رابط Material Design 3 با داده زنده، پشتیبانی چندزبانه (FA/EN)، حالت تیره/روشن و سازگاری کامل RTL.</div>
+            </a>
+            <a class="feature-card feature-card--sketch" href="#scanner">
+              <div data-illustration data-sketch="scanner"></div>
+              <div data-title>اسکنر و حفاظت بدافزار</div>
+              <div data-subtitle>هسته امضا و تحلیل رفتاری با اتصال اختیاری VirusTotal؛ اسکن زمان‌بندی‌شده، شروع دستی، مدیریت قرنطینه و تاریخچه اسکن.</div>
+            </a>
+            <a class="feature-card feature-card--sketch" href="#sandbox">
+              <div data-illustration data-sketch="sandbox"></div>
+              <div data-title>سه لایه محافظتی</div>
+              <div data-subtitle>Sandbox · Security · Network</div>
+            </a>
+            <a class="feature-card feature-card--sketch" href="#threat-modeling">
+              <div data-illustration data-sketch="threatmodel"></div>
+              <div data-title>مدل‌سازی تهدید</div>
+              <div data-subtitle>رجیستری مدل تهدید با به‌روزرسانی خودکار و صفحه اختصاصی تحلیل سطح حمله.</div>
+            </a>
+            <a class="feature-card feature-card--sketch" href="#vulnerability">
+              <div data-illustration data-sketch="vulnerability"></div>
+              <div data-title>مدیریت آسیب‌پذیری</div>
+              <div data-subtitle>اسکنر آسیب‌پذیری به‌همراه مدیر CVE و اسکن دوره‌ای برای هسته، افزونه‌ها و پوسته‌ها.</div>
+            </a>
+          </div>
+
+          
+          <div class="features__col">
+            <a class="feature-card feature-card--sketch" href="#security-layer">
+              <div data-illustration data-sketch="zerotrust"></div>
+              <div data-title>زیروتراست و لایه امنیتی</div>
+              <div data-subtitle>امتیازدهی ریسک برای هر درخواست/عملیات با سطح اعتماد بالا، متوسط و پایین بر اساس دستگاه، زمان، تغییر فایل و SSL.</div>
+            </a>
+            <a class="feature-card feature-card--sketch" href="#siem">
+              <div data-illustration data-sketch="siem"></div>
+              <div data-title>پایش و SIEM</div>
+              <div data-subtitle>مانیتورینگ لحظه‌ای فعالیت‌ها، ردیابی تغییرات کاربر/افزونه/پوسته و تحلیل SIEM با نمودار و تایم‌لاین.</div>
+            </a>
+            <a class="feature-card feature-card--sketch" href="#audit">
+              <div data-illustration data-sketch="audit"></div>
+              <div data-title>ممیزی و انطباق</div>
+              <div data-subtitle>لاگ ممیزی پایدار با سطح شدت، قابلیت جست‌وجو، فیلتر، خروجی و نگه‌داری قابل تنظیم.</div>
+            </a>
+            <a class="feature-card feature-card--sketch" href="#advisory">
+              <div data-illustration data-sketch="ai"></div>
+              <div data-title>امنیت و مشاوره هوش مصنوعی</div>
+              <div data-subtitle>طبقه‌بند تهدید، مشاور امنیتی و صفحه راهنمای مبتنی بر AI با امکان توسعه برای ML/LLM.</div>
+            </a>
+            <a class="feature-card feature-card--sketch" href="#settings">
+              <div data-illustration data-sketch="settings"></div>
+              <div data-title>تنظیمات و مدیریت</div>
+              <div data-subtitle>تنظیمات مرکزی همه ماژول‌ها، اعلان ایمیلی اختیاری مدیر، پشتیبانی چندزبانه و RTL.</div>
+            </a>
+            <a class="feature-card feature-card--next" href="https://rastchin.com" target="_blank" rel="noopener">
+              <div data-illustration>
+                <div class="switchboard" id="switchboard"></div>
+              </div>
+              <div data-title>معماری ماژولار</div>
+              <div data-subtitle>فایروال، احراز هویت، اسکنر، پایش، ممیزی، آسیب‌پذیری، زیروتراست، AI، سندباکس و بیشتر؛ یک افزونه با ۱۴ صفحه مدیریتی.</div>
+              <div data-button><span class="material-symbols-outlined icon-md" aria-hidden="true">arrow_forward</span></div>
+            </a>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="modules" id="modules">
-      <div class="container">
-        <div class="section-header">
-          <h2 data-i18n="modules.title">12 integrated security modules</h2>
-          <p data-i18n="modules.subtitle">One unified dashboard for every layer of WordPress protection.</p>
+    
+    <section class="foundation">
+      <div class="foundation__main">
+        <h2 class="foundation__title">ساخته‌شده بر پایه ابزارهای سریع <span data-break></span>و آماده محیط واقعی</h2>
+        <div class="foundation__illustration">
+          <svg id="foundation-lines" class="foundation__lines" fill="none" height="264" viewBox="0 0 891 264" width="891" aria-hidden="true">
+            <path class="foundation-line" data-delay="0.1" d="M388 96L388 68C388 65.7909 386.209 64 384 64L310 64" stroke="var(--geist-foreground)" stroke-opacity="0.1"/>
+            <path class="foundation-line" data-delay="0.2" d="M349 150L73 150C70.7909 150 69 151.791 69 154L69 174" stroke="var(--geist-foreground)" stroke-opacity="0.1"/>
+            <g>
+              <path class="foundation-line" data-delay="0.3" d="M547 130L822 130C824.209 130 826 131.791 826 134L826 264" stroke="var(--geist-foreground)" stroke-opacity="0.1"/>
+              <path class="foundation-pulse" d="M547 130L822 130C824.209 130 826 131.791 826 134L826 264" stroke="url(#orange-pulse-1)" stroke-width="2"/>
+            </g>
+            <g>
+              <path class="foundation-line" data-delay="0.4" d="M349 130L5.00002 130C2.79088 130 1.00001 131.791 1.00001 134L1.00001 264" stroke="var(--geist-foreground)" stroke-opacity="0.1"/>
+              <path class="foundation-pulse" d="M349 130L5.00002 130C2.79088 130 1.00001 131.791 1.00001 134L1.00001 264" stroke="url(#blue-pulse-1)" stroke-linecap="round" stroke-width="2"/>
+            </g>
+            <g>
+              <path class="foundation-line" data-delay="0.5" d="M547 150L633 150C635.209 150 637 151.791 637 154L637 236C637 238.209 635.209 240 633 240L488 240C485.791 240 484 241.791 484 244L484 264" stroke="var(--geist-foreground)" stroke-opacity="0.1"/>
+              <path class="foundation-pulse" d="M547 150L633 150C635.209 150 637 151.791 637 154L637 236C637 238.209 635.209 240 633 240L488 240C485.791 240 484 241.791 484 244L484 264" stroke="url(#pink-pulse-2)" stroke-linecap="round" stroke-width="2"/>
+            </g>
+            <g>
+              <path class="foundation-line" data-delay="0.6" d="M388 184L388 194C388 196.209 386.209 198 384 198L77 198C74.7909 198 73 199.791 73 202L73 264" stroke="var(--geist-foreground)" stroke-opacity="0.1"/>
+              <path class="foundation-pulse" d="M388 184L388 194C388 196.209 386.209 198 384 198L77 198C74.7909 198 73 199.791 73 202L73 264" stroke="url(#blue-pulse-2)" stroke-linecap="round" stroke-width="2"/>
+            </g>
+            <path class="foundation-line" data-delay="0.7" d="M412 96L412 0" stroke="url(#paint0_linear)" stroke-opacity="0.1"/>
+            <g>
+              <path class="foundation-line" data-delay="0.8" data-reverse="true" d="M412 263.5L412 184" stroke="var(--geist-foreground)" stroke-opacity="0.1"/>
+              <path class="foundation-pulse" d="M412 263.5L412 184" stroke="url(#pink-pulse-1)" stroke-linecap="round" stroke-width="2"/>
+            </g>
+            <g>
+              <path class="foundation-line" data-delay="0.9" d="M508 96L508 88C508 85.7909 509.791 84 512 84L886 84C888.209 84 890 85.7909 890 88L890 264" stroke="var(--geist-foreground)" stroke-opacity="0.1"/>
+              <path class="foundation-pulse" d="M508 96L508 88C508 85.7909 509.791 84 512 84L886 84C888.209 84 890 85.7909 890 88L890 264" stroke="url(#orange-pulse-2)" stroke-width="2"/>
+            </g>
+            <path class="foundation-line" data-delay="1" d="M436 96L436 0" stroke="url(#paint1_linear)" stroke-opacity="0.1"/>
+            <path class="foundation-line" data-delay="1" data-reverse="true" d="M436 214L436 184" stroke="var(--geist-foreground)" stroke-opacity="0.1"/>
+            <path class="foundation-line" data-delay="1" d="M460 96L460 64" stroke="var(--geist-foreground)" stroke-opacity="0.1"/>
+            <path class="foundation-line" data-delay="1" data-reverse="true" d="M460 239L460 184" stroke="var(--geist-foreground)" stroke-opacity="0.1"/>
+            <path class="foundation-line" data-delay="1" d="M484 96L484 24C484 21.7909 485.791 20 488 20L554 20" stroke="url(#paint2_linear)" stroke-opacity="0.1"/>
+            <path class="foundation-line" data-delay="1" d="M484 184L484 210C484 212.209 485.791 214 488 214L560 214" stroke="var(--geist-foreground)" stroke-opacity="0.1"/>
+            <path class="foundation-line" data-delay="1" d="M508 184L508 193C508 195.209 509.791 197 512 197L560 197" stroke="var(--geist-foreground)" stroke-opacity="0.1"/>
+            <circle class="foundation-node" cx="460" cy="64" fill="var(--geist-background)" r="4"/>
+            <circle class="foundation-node" cx="460" cy="64" r="3.5" stroke="var(--geist-foreground)" stroke-opacity="0.1"/>
+            <circle class="foundation-node" cx="308" cy="64" fill="var(--geist-background)" r="4"/>
+            <circle class="foundation-node" cx="308" cy="64" r="3.5" stroke="var(--geist-foreground)" stroke-opacity="0.1"/>
+            <circle class="foundation-node" cx="69" cy="173" fill="var(--geist-background)" r="4"/>
+            <circle class="foundation-node" cx="69" cy="173" r="3.5" stroke="var(--geist-foreground)" stroke-opacity="0.1"/>
+            <circle class="foundation-node" cx="436" cy="214" fill="var(--geist-background)" r="4"/>
+            <circle class="foundation-node" cx="436" cy="214" r="3.5" stroke="var(--geist-foreground)" stroke-opacity="0.1"/>
+            <circle class="foundation-node" cx="460" cy="240" fill="var(--geist-background)" r="4"/>
+            <circle class="foundation-node" cx="460" cy="240" r="3.5" stroke="var(--geist-foreground)" stroke-opacity="0.1"/>
+            <circle class="foundation-node" cx="560" cy="214" fill="var(--geist-background)" r="4"/>
+            <circle class="foundation-node" cx="560" cy="214" r="3.5" stroke="var(--geist-foreground)" stroke-opacity="0.1"/>
+            <circle class="foundation-node" cx="560" cy="197" fill="var(--geist-background)" r="4"/>
+            <circle class="foundation-node" cx="560" cy="197" r="3.5" stroke="var(--geist-foreground)" stroke-opacity="0.1"/>
+            <defs>
+              <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear" x1="412.5" x2="412.5" y1="0" y2="96"><stop stop-opacity="0"/><stop offset="1"/></linearGradient>
+              <linearGradient gradientUnits="userSpaceOnUse" id="paint1_linear" x1="436.5" x2="436.5" y1="0" y2="96"><stop stop-opacity="0"/><stop offset="1"/></linearGradient>
+              <linearGradient gradientUnits="userSpaceOnUse" id="paint2_linear" x1="554" x2="484" y1="20" y2="96"><stop stop-opacity="0"/><stop offset="1"/></linearGradient>
+              <linearGradient gradientUnits="userSpaceOnUse" id="blue-pulse-1" x1="83" y1="320" x2="83" y2="415">
+                <stop stop-color="#2EB9DF" stop-opacity="0"/><stop offset="0.05" stop-color="#2EB9DF"/><stop offset="1" stop-color="#2EB9DF" stop-opacity="0"/>
+              </linearGradient>
+              <linearGradient gradientUnits="userSpaceOnUse" id="blue-pulse-2" x1="83" y1="267.5" x2="83" y2="300">
+                <stop stop-color="#2EB9DF" stop-opacity="0"/><stop offset="0.05" stop-color="#2EB9DF"/><stop offset="1" stop-color="#2EB9DF" stop-opacity="0"/>
+              </linearGradient>
+              <linearGradient gradientUnits="userSpaceOnUse" id="pink-pulse-1" x1="412" y1="264" x2="412" y2="304">
+                <stop stop-color="#FF4A81" stop-opacity="0"/><stop offset="0.030" stop-color="#FF4A81"/><stop offset="0.27" stop-color="#DF6CF6"/><stop offset="1" stop-color="#0196FF" stop-opacity="0"/>
+              </linearGradient>
+              <linearGradient gradientUnits="userSpaceOnUse" id="pink-pulse-2" x1="490" y1="266" x2="490" y2="284">
+                <stop stop-color="#FF4A81" stop-opacity="0"/><stop offset="0.0564843" stop-color="#FF4A81"/><stop offset="0.4616" stop-color="#DF6CF6"/><stop offset="1" stop-color="#0196FF" stop-opacity="0"/>
+              </linearGradient>
+              <linearGradient gradientUnits="userSpaceOnUse" id="orange-pulse-1" x1="826" y1="270" x2="826" y2="340">
+                <stop stop-color="#FF7432" stop-opacity="0"/><stop offset="0.0550784" stop-color="#FF7432"/><stop offset="0.373284" stop-color="#F7CC4B"/><stop offset="1" stop-color="#F7CC4B" stop-opacity="0"/>
+              </linearGradient>
+              <linearGradient gradientUnits="userSpaceOnUse" id="orange-pulse-2" x1="868" y1="280" x2="868" y2="440">
+                <stop stop-color="#FF7432" stop-opacity="0"/><stop offset="0.0531089" stop-color="#FF7432"/><stop offset="0.415114" stop-color="#F7CC4B"/><stop offset="1" stop-color="#F7CC4B" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div class="foundation__cpu">
+            <div class="foundation__cpu-shine" data-cpu-shine></div>
+            <div data-connectors data-side="left"><span data-connector></span><span data-connector></span></div>
+            <div data-connectors data-side="top"><span data-connector></span><span data-connector></span><span data-connector></span><span data-connector></span><span data-connector></span><span data-connector></span></div>
+            <span data-text>محافظت‌شده توسط نت‌گارد</span>
+            <div data-connectors data-side="bottom"><span data-connector></span><span data-connector></span><span data-connector></span><span data-connector></span><span data-connector></span><span data-connector></span></div>
+            <div data-connectors data-side="right"><span data-connector></span><span data-connector></span></div>
+          </div>
         </div>
-        <div class="modules__layout">
-          <nav class="module-nav" id="module-nav"></nav>
-          <div class="module-panel" id="module-panel"></div>
+        <div class="foundation__cards">
+          <a class="foundation-card" data-variant="react" href="#">
+            <div data-icon><span class="material-symbols-outlined icon-lg" aria-hidden="true">dashboard</span></div>
+            <div data-title>داشبورد ری‌اکت</div>
+            <div data-subtitle>رابط مدیریتی Material Design 3 با داده زنده، امتیاز امنیت، وضعیت ماژول‌ها و سلامت سیستم.</div>
+          </a>
+          <a class="foundation-card" data-variant="turbo" href="#">
+            <div data-icon><span class="material-symbols-outlined icon-lg" aria-hidden="true">api</span></div>
+            <div data-title>REST API</div>
+            <div data-subtitle>اندپوینت‌های <code>netguard/v1</code> برای همه ماژول‌ها جهت ادغام قوانین فایروال، اسکن، رویداد و تنظیمات.</div>
+          </a>
+          <a class="foundation-card" data-variant="swc" href="#">
+            <div data-icon><span class="material-symbols-outlined icon-lg" aria-hidden="true">hub</span></div>
+            <div data-title>سیستم رویداد</div>
+            <div data-subtitle>اتوبوس رویداد داخلی با هوک‌های وردپرس، لاگ ساختاریافته، بررسی SHA-256 و اجرای کران در پس‌زمینه.</div>
+          </a>
         </div>
       </div>
     </section>
 
-    <section class="cta" id="buy">
-      <div class="container cta__inner cta__inner--buy">
-        <div class="cta__content">
-          <h2 data-i18n="cta.title">Ready to secure your WordPress site?</h2>
-          <p data-i18n="cta.subtitle">Get NetGuard from Rastchin — Iran's trusted source for WordPress plugins and themes.</p>
-        </div>
-        <div class="cta__buy">
-          <a href="https://rastchin.com" class="btn btn--primary btn--lg" target="_blank" rel="noopener" data-i18n="cta.buy">Buy from Rastchin</a>
-          <p class="cta__note" data-i18n="cta.note">Secure checkout · Free updates after purchase · Official support</p>
+    
+    <section class="templates">
+      <div class="templates__main">
+        <h2 data-main-heading>سه لایه محافظتی</h2>
+        <p data-main-paragraph>نت‌گارد دفاع وردپرس را در سه سطح پیوسته، از اجرای امن تا کنترل ترافیک، مدیریت می‌کند.</p>
+        <div class="templates__deploy">
+          <div class="templates__text">
+            <h3>Sandbox · Security · Network</h3>
+            <p class="templates__subtext"><strong>Sandbox</strong> فایل‌ها، افزونه‌ها و عملیات حساس را پیش از اجرا در محیطی ایزوله تحلیل می‌کند تا ریسک تغییرات مشکوک به سایت منتقل نشود.</p>
+            <p class="templates__subtext"><strong>Security</strong> لایه اصلی دفاع وردپرس را با فایروال، احراز هویت، اسکن بدافزار و مدیریت آسیب‌پذیری‌ها یکپارچه می‌سازد.</p>
+            <p class="templates__subtext"><strong>Network</strong> ترافیک ورودی، IPهای پرریسک و درخواست‌های غیرعادی را پایش می‌کند تا فشار حملات پیش از رسیدن به هسته سایت کنترل شود.</p>
+            <a href="https://rastchin.com" class="btn btn--primary" target="_blank" rel="noopener">خرید از راست‌چین</a>
+          </div>
+          <div class="templates__sketch" aria-hidden="true">
+            <svg class="templates__sketch-svg" viewBox="0 0 268 212" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="134" cy="106" r="82" stroke="currentColor" stroke-width="0.5" opacity="0.1"/>
+              <circle cx="134" cy="106" r="68" stroke="currentColor" stroke-width="0.5" opacity="0.16"/>
+              <rect x="64" y="58" width="140" height="32" rx="8" stroke="currentColor" stroke-width="0.75" opacity="0.4"/>
+              <rect x="74" y="96" width="120" height="32" rx="8" stroke="currentColor" stroke-width="0.75" opacity="0.34"/>
+              <rect x="84" y="134" width="100" height="32" rx="8" stroke="currentColor" stroke-width="0.75" opacity="0.28"/>
+              <line x1="134" y1="90" x2="134" y2="96" stroke="currentColor" stroke-width="0.5" opacity="0.26"/>
+              <line x1="134" y1="128" x2="134" y2="134" stroke="currentColor" stroke-width="0.5" opacity="0.22"/>
+              <text x="134" y="78" text-anchor="middle" fill="currentColor" font-size="10" opacity="0.72" font-family="Yekan,Tahoma,sans-serif">Sandbox</text>
+              <text x="134" y="116" text-anchor="middle" fill="currentColor" font-size="10" opacity="0.62" font-family="Yekan,Tahoma,sans-serif">Security</text>
+              <text x="134" y="154" text-anchor="middle" fill="currentColor" font-size="10" opacity="0.54" font-family="Yekan,Tahoma,sans-serif">Network</text>
+              <circle cx="52" cy="58" r="5" stroke="currentColor" stroke-width="0.5" opacity="0.22"/>
+              <circle cx="216" cy="58" r="5" stroke="currentColor" stroke-width="0.5" opacity="0.22"/>
+              <circle cx="52" cy="154" r="5" stroke="currentColor" stroke-width="0.5" opacity="0.22"/>
+              <circle cx="216" cy="154" r="5" stroke="currentColor" stroke-width="0.5" opacity="0.22"/>
+              <line x1="57" y1="58" x2="88" y2="78" stroke="currentColor" stroke-width="0.4" opacity="0.14"/>
+              <line x1="211" y1="58" x2="180" y2="78" stroke="currentColor" stroke-width="0.4" opacity="0.14"/>
+              <line x1="57" y1="154" x2="88" y2="134" stroke="currentColor" stroke-width="0.4" opacity="0.14"/>
+              <line x1="211" y1="154" x2="180" y2="134" stroke="currentColor" stroke-width="0.4" opacity="0.14"/>
+            </svg>
+          </div>
         </div>
       </div>
     </section>
+
+    <section class="customers" id="showcase">
+      <h2 class="customers__title">وقتی امنیت مهم است، <span data-break></span>انتخاب اول شما</h2>
+
+      <div class="showcase">
+        <div class="showcase__grid">
+          <div class="showcase__col">
+            <div class="showcase__preview showcase__preview--lg">
+              <div class="showcase__media">
+                <img src="assets/showcase/auth.png" alt="تصویر ماژول احراز هویت نت‌گارد" loading="lazy">
+              </div>
+            </div>
+            <div class="showcase__preview showcase__preview--portrait">
+              <div class="showcase__media">
+                <img src="assets/showcase/dashboard-mobile.png" alt="تصویر داشبورد امنیتی نت‌گارد در موبایل" loading="lazy">
+              </div>
+            </div>
+          </div>
+          <div class="showcase__col showcase__col--center">
+            <div class="showcase__preview showcase__preview--xl">
+              <div class="showcase__media">
+                <img src="assets/showcase/dashboard.png" alt="تصویر داشبورد امنیتی نت‌گارد" loading="lazy">
+              </div>
+            </div>
+          </div>
+          <div class="showcase__col">
+            <div class="showcase__preview showcase__preview--lg">
+              <div class="showcase__media">
+                <img src="assets/showcase/vulnerability.png" alt="تصویر اسکنر آسیب‌پذیری نت‌گارد" loading="lazy">
+              </div>
+            </div>
+            <div class="showcase__row">
+              <div class="showcase__preview showcase__preview--portrait">
+                <div class="showcase__media">
+                  <img src="assets/showcase/scanner-mobile.png" alt="تصویر اسکنر بدافزار نت‌گارد در موبایل" loading="lazy">
+                </div>
+              </div>
+              <div class="showcase__preview showcase__preview--portrait">
+                <div class="showcase__media">
+                  <img src="assets/showcase/twofa.png" alt="تصویر احراز هویت دومرحله‌ای نت‌گارد" loading="lazy">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="showcase__col">
+            <div class="showcase__preview showcase__preview--lg">
+              <div class="showcase__media">
+                <img src="assets/showcase/scanner-desktop.png" alt="تصویر اسکنر بدافزار نت‌گارد" loading="lazy">
+              </div>
+            </div>
+            <div class="showcase__preview showcase__preview--md">
+              <div class="showcase__media">
+                <img src="assets/showcase/scanner-light.png" alt="تصویر نسخه بومی‌سازی‌شده اسکنر بدافزار نت‌گارد" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="customers__subtitle">برای <strong>محافظت</strong>، <strong>دیدپذیری</strong> و <strong>کنترل</strong>. <span data-break></span>نت‌گارد امنیت در سطح سازمانی را به وردپرس می‌آورد.</p>
+
+    </section>
+
   </main>
 
+  
   <footer class="footer">
-    <div class="container footer__inner">
-      <div class="footer__brand">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-        </svg>
-        <span>NetGuard</span>
+    <div class="footer__inner">
+      <div class="footer__grid">
+        <div class="footer__brand" data-logo>
+          <a href="index.html" data-logo-link>
+            <img src="assets/icon.png" alt="" width="28" height="28" class="site-icon site-icon--sm">
+            نت‌گارد
+          </a>
+        </div>
+        <div class="footer__col">
+          <h4>منابع</h4>
+          <a href="index.html#features">مستندات</a>
+          <a href="installation-guide.html">راهنمای نصب</a>
+          <a href="troubleshooting.html">عیب‌یابی</a>
+        </div>
+        <div class="footer__col">
+          <h4>بیشتر</h4>
+          <a href="https://rastchin.com" target="_blank" rel="noopener">خرید از راست‌چین</a>
+        </div>
       </div>
-      <p class="footer__copy" data-i18n="footer.copy">© 2026 NetGuard. WordPress Security Suite.</p>
+      <div class="footer__copyright">
+        <p>© ۲۰۲۶ نت‌گارد. مجموعه امنیتی وردپرس.</p>
+      </div>
     </div>
   </footer>
 
-  <script src="js/i18n.js"></script>
-  <script src="js/modules.js"></script>
+  <script src="js/sketches.js"></script>
+  <script src="js/foundation.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

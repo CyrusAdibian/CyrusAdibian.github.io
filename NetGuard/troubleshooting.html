@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" class="dark-theme">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>عیب‌یابی — نت‌گارد</title>
+  <meta name="description" content="مدیریت خطای نت‌گارد: محل نمایش خطاها، سطح شدت و راه‌حل مرحله‌به‌مرحله برای مشکلات نصب، یکپارچگی، داشبورد و API.">
+  <link rel="icon" href="assets/icon.png" type="image/png" sizes="512x512">
+  <link rel="apple-touch-icon" href="assets/icon.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="index.html" class="nav__logo" aria-label="رفتن به صفحه اصلی">
+        <img src="assets/icon.png" alt="" width="44" height="44" class="site-icon">
+        <span>نت‌گارد</span>
+      </a>
+      <div class="nav__links">
+        <a href="index.html#features">مستندات</a>
+        <a href="installation-guide.html">نصب</a>
+        <a href="troubleshooting.html">عیب‌یابی</a>
+      </div>
+      <div class="nav__actions">
+        <a href="https://rastchin.com" class="btn btn--outline btn--sm" target="_blank" rel="noopener">خرید</a>
+        <button class="nav__menu" aria-label="باز کردن منو" type="button"><span class="material-symbols-outlined" aria-hidden="true">menu</span></button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="doc">
+    <aside class="doc__sidebar">
+      <h4>راهنماها</h4>
+      <nav>
+        <a href="installation-guide.html">راهنمای نصب</a>
+        <a href="troubleshooting.html" class="is-active">عیب‌یابی</a>
+        <a href="#where-errors-appear">محل نمایش خطاها</a>
+        <a href="#setup-errors">خطاهای نصب</a>
+        <a href="#integrity-errors">خطاهای یکپارچگی</a>
+        <a href="#dashboard-errors">داشبورد و رابط API</a>
+        <a href="#general-tips">نکات عمومی</a>
+      </nav>
+    </aside>
+
+    <article class="doc__content">
+      <h1>عیب‌یابی</h1>
+      <p class="doc__lead">نت‌گارد در زمان بارگذاری افزونه، محیط وردپرس را بررسی می‌کند. اگر مشکلی وجود داشته باشد، پیام خطا همراه با راه‌حل مرحله‌به‌مرحله نمایش داده می‌شود.</p>
+
+      <h2 id="where-errors-appear">محل نمایش خطاها</h2>
+      <ul>
+        <li><strong>صفحات نت‌گارد</strong> — پنل کامل خطا یا هشدار</li>
+        <li><strong>سایر صفحات مدیریت وردپرس</strong> — اعلان مدیریتی در بالای صفحه</li>
+      </ul>
+
+      <h2 id="setup-errors">خطاهای نصب و پکیج</h2>
+
+      <div class="doc__error" id="php-version">
+        <h3>نسخه PHP پایین است</h3>
+        <span class="doc__label">علت</span>
+        <p>نسخه PHP سرور شما کمتر از 8.2 است.</p>
+        <span class="doc__label">راه‌حل</span>
+        <ol>
+          <li>در پنل هاست، نسخه PHP را به 8.2 یا بالاتر تغییر دهید.</li>
+          <li>در محیط محلی (XAMPP/MAMP) نسخه PHP را به‌روزرسانی کنید.</li>
+          <li>پنل وردپرس را رفرش کرده و نت‌گارد را دوباره باز کنید.</li>
+        </ol>
+      </div>
+
+      <div class="doc__error" id="wp-version">
+        <h3>نسخه وردپرس پایین است</h3>
+        <span class="doc__label">علت</span>
+        <p>نسخه وردپرس شما کمتر از 6.4 است.</p>
+        <span class="doc__label">راه‌حل</span>
+        <ol>
+          <li>از سایت نسخه پشتیبان تهیه کنید.</li>
+          <li>از مسیر <strong>پیشخوان ← به‌روزرسانی‌ها</strong> وردپرس را آپدیت کنید.</li>
+          <li>دوباره نت‌گارد را اجرا کنید.</li>
+        </ol>
+      </div>
+
+      <div class="doc__error" id="vendor-missing">
+        <h3>پکیج افزونه ناقص است (<code>vendor/</code> وجود ندارد)</h3>
+        <span class="doc__label">علت</span>
+        <p>پوشه <code>vendor/</code> در بسته بارگذاری‌شده وجود ندارد.</p>
+        <span class="doc__label">راه‌حل</span>
+        <ol>
+          <li>بسته کامل افزونه را دوباره دانلود کنید.</li>
+          <li>پوشه فعلی افزونه را حذف و نسخه کامل را در <code>wp-content/plugins/NetGuard/</code> کپی کنید.</li>
+          <li>افزونه را غیرفعال/فعال کنید.</li>
+        </ol>
+      </div>
+
+      <div class="doc__error" id="dashboard-assets">
+        <h3>فایل‌های داشبورد موجود نیستند</h3>
+        <span class="doc__label">علت</span>
+        <p>فایل‌های آماده داشبورد داخل پوشه افزونه پیدا نشده‌اند.</p>
+        <span class="doc__label">راه‌حل</span>
+        <ol>
+          <li>پکیج کامل انتشار را جایگزین کنید.</li>
+          <li>از وجود فایل‌های <code>dashboard/dist/index.js</code>، <code>dashboard/dist/style.css</code> و <code>dashboard/dist/index.asset.php</code> مطمئن شوید.</li>
+        </ol>
+      </div>
+
+      <div class="doc__error" id="database-tables">
+        <h3>جداول دیتابیس ساخته نشده‌اند</h3>
+        <span class="doc__label">علت</span>
+        <p>نت‌گارد هنگام فعال‌سازی نتوانسته جداول موردنیاز را ایجاد کند.</p>
+        <span class="doc__label">راه‌حل</span>
+        <ol>
+          <li>افزونه را یک‌بار غیرفعال و دوباره فعال کنید.</li>
+          <li>مجوزهای دیتابیس برای <code>CREATE</code> و <code>ALTER</code> را بررسی کنید.</li>
+          <li>در صورت نیاز، <code>WP_DEBUG</code> را فعال و لاگ <code>wp-content/debug.log</code> را بررسی کنید.</li>
+        </ol>
+      </div>
+
+      <div class="doc__error" id="ioncube">
+        <h3>نیاز به ionCube Loader</h3>
+        <span class="doc__label">علت</span>
+        <p>این نسخه نت‌گارد به افزونه PHP با نام ionCube Loader نیاز دارد.</p>
+        <span class="doc__label">راه‌حل</span>
+        <ol>
+          <li>ionCube Loader را مطابق نسخه PHP نصب کنید.</li>
+          <li>وب‌سرور/PHP را ری‌استارت کنید.</li>
+        </ol>
+      </div>
+
+      <h2 id="integrity-errors">خطاهای یکپارچگی فایل</h2>
+      <p>نت‌گارد فایل‌های افزونه را با <code>integrity-manifest.json</code> و خط مبنای قابل اعتماد مقایسه می‌کند.</p>
+
+      <div class="doc__error" id="manifest-missing">
+        <h3>مانیفست یکپارچگی پیدا نشد</h3>
+        <span class="doc__label">علت</span>
+        <p>فایل <code>integrity-manifest.json</code> در پوشه افزونه وجود ندارد.</p>
+        <span class="doc__label">راه‌حل</span>
+        <ol>
+          <li>نسخه کامل افزونه را جایگزین کنید.</li>
+          <li>افزونه را دوباره فعال کنید.</li>
+        </ol>
+      </div>
+
+      <div class="doc__error" id="files-changed">
+        <h3>فایل‌های افزونه تغییر کرده‌اند</h3>
+        <span class="doc__label">علت</span>
+        <p>برخی فایل‌ها با مانیفست انتشار یا خط مبنای معتبر همخوانی ندارند.</p>
+        <span class="doc__label">راه‌حل</span>
+        <ol>
+          <li>فایل‌های هسته افزونه را ویرایش نکنید.</li>
+          <li>کل پوشه افزونه را با نسخه اصلی جایگزین کنید.</li>
+          <li>افزونه را غیرفعال/فعال کنید تا خط مبنا دوباره ساخته شود.</li>
+        </ol>
+      </div>
+
+      <div class="doc__error" id="scan-storage">
+        <h3><span class="doc__severity doc__severity--warning">هشدار</span> مسیر ذخیره‌سازی اسکن قابل نوشتن نیست</h3>
+        <span class="doc__label">علت</span>
+        <p>نت‌گارد امکان نوشتن در مسیر ذخیره‌سازی اسکن (معمولاً <code>wp-content/uploads</code>) را ندارد.</p>
+        <span class="doc__label">راه‌حل</span>
+        <ol>
+          <li>مجوز نوشتن مسیر <code>uploads</code> را اصلاح کنید.</li>
+          <li>پس از اصلاح دسترسی، یک اسکن جدید اجرا کنید.</li>
+        </ol>
+      </div>
+
+      <h2 id="dashboard-errors">خطاهای داشبورد و رابط API</h2>
+      <p>اگر صفحه باز می‌شود ولی پیام «مشکلی رخ داد» می‌بینید، معمولاً درخواست API ناموفق بوده است.</p>
+
+      <div class="doc__error" id="session-error">
+        <h3>خطای نشست یا دسترسی (401/403)</h3>
+        <span class="doc__label">راه‌حل</span>
+        <ol>
+          <li>صفحه را رفرش کنید.</li>
+          <li>از حساب خارج و دوباره وارد شوید.</li>
+          <li>سطح دسترسی مدیر را بررسی کنید.</li>
+        </ol>
+      </div>
+
+      <div class="doc__error" id="route-not-found">
+        <h3>مسیر REST پیدا نشد (404)</h3>
+        <span class="doc__label">راه‌حل</span>
+        <ol>
+          <li>به تنظیمات پیوند یکتا بروید و یک‌بار ذخیره کنید.</li>
+          <li>افزونه را دوباره فعال کرده و صفحه را رفرش کنید.</li>
+        </ol>
+      </div>
+
+      <div class="doc__error" id="server-error">
+        <h3>خطای سرور (500)</h3>
+        <span class="doc__label">راه‌حل</span>
+        <ol>
+          <li>لاگ <code>wp-content/debug.log</code> را بررسی کنید.</li>
+          <li>از نسخه صحیح PHP و وجود پوشه <code>vendor/</code> مطمئن شوید.</li>
+        </ol>
+      </div>
+
+      <div class="doc__error" id="blocked-api">
+        <h3>پاسخ API مسدود یا نامعتبر</h3>
+        <span class="doc__label">راه‌حل</span>
+        <ol>
+          <li>افزونه‌های امنیتی دیگر را موقتاً غیرفعال کنید.</li>
+          <li>اجازه دسترسی مسیر <code>/wp-json/</code> برای مدیر سایت را بررسی کنید.</li>
+        </ol>
+      </div>
+
+      <div class="doc__error" id="network-error">
+        <h3>خطای شبکه یا اتصال</h3>
+        <span class="doc__label">راه‌حل</span>
+        <ol>
+          <li>اتصال اینترنت را بررسی کرده و دوباره تلاش کنید.</li>
+          <li>باز بودن سایت وردپرس و دسترسی API را بررسی کنید.</li>
+        </ol>
+      </div>
+
+      <h2 id="general-tips">نکات عمومی</h2>
+      <ul>
+        <li>همیشه از سایت نسخه پشتیبان داشته باشید.</li>
+        <li>پس از هر تغییر مهم، کش مرورگر و کش سایت را پاک کنید.</li>
+        <li>برای مراحل اولیه نصب، <a href="installation-guide.html" style="color: var(--geist-link-color);">راهنمای نصب</a> را ببینید.</li>
+      </ul>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__grid">
+        <div class="footer__brand" data-logo>
+          <a href="index.html" data-logo-link>
+            <img src="assets/icon.png" alt="" width="28" height="28" class="site-icon site-icon--sm">
+            نت‌گارد
+          </a>
+        </div>
+        <div class="footer__col">
+          <h4>منابع</h4>
+          <a href="index.html#features">مستندات</a>
+          <a href="installation-guide.html">راهنمای نصب</a>
+          <a href="troubleshooting.html">عیب‌یابی</a>
+        </div>
+        <div class="footer__col">
+          <h4>بیشتر</h4>
+          <a href="https://rastchin.com" target="_blank" rel="noopener">خرید از راست‌چین</a>
+        </div>
+      </div>
+      <div class="footer__copyright">
+        <p>© ۲۰۲۶ نت‌گارد. مجموعه امنیتی وردپرس.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
