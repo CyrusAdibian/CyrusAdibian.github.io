@@ -7,46 +7,64 @@
   <meta name="description" content="نت‌گارد یک مجموعه امنیتی ماژولار برای وردپرس است با WAF، اسکنر بدافزار، Zero Trust، SIEM و داشبورد مدیریتی React.">
   <link rel="icon" href="assets/icon.png" type="image/png" sizes="512x512">
   <link rel="apple-touch-icon" href="assets/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hemedani/yekan@v3.0.0/font-face.css">
   <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/material-web.bundle.js"></script>
 </head>
 <body>
-  
-  <header class="header">
-    <nav class="nav">
-      <a href="index.html" class="nav__logo" aria-label="رفتن به صفحه اصلی">
-        <img src="assets/icon.png" alt="" width="44" height="44" class="site-icon">
-        <span>نت‌گارد</span>
+
+  <header class="app-bar">
+    <div class="app-bar__inner">
+      <a href="index.html" class="app-bar__brand" aria-label="رفتن به صفحه اصلی">
+        <img src="assets/icon.png" alt="" width="40" height="40" class="site-icon">
+        <span class="app-bar__brand-text">نت‌گارد</span>
       </a>
-      <div class="nav__links">
+      <nav class="app-bar__nav" aria-label="ناوبری اصلی">
+        <a href="index.html#features" class="is-active">مستندات</a>
         <a href="installation-guide.html">نصب</a>
         <a href="troubleshooting.html">عیب‌یابی</a>
-      </div>
-      <div class="nav__actions">
-        <a href="https://rastchin.com" class="btn btn--outline btn--sm" target="_blank" rel="noopener">خرید از راست‌چین</a>
+      </nav>
+      <div class="app-bar__actions">
+        <a class="btn-anchor" href="https://rastchin.com" target="_blank" rel="noopener">
+          <md-filled-tonal-button>خرید از راست‌چین</md-filled-tonal-button>
+        </a>
         <button class="lang-toggle" type="button" data-lang-toggle data-no-i18n aria-label="Switch language">EN</button>
-        <button class="nav__menu" aria-label="باز کردن منو" type="button"><span class="material-symbols-outlined" aria-hidden="true">menu</span></button>
+        <md-icon-button toggle id="theme-toggle" aria-label="تغییر حالت ظاهر">
+          <md-icon>light_mode</md-icon>
+          <md-icon slot="selected">dark_mode</md-icon>
+        </md-icon-button>
+        <button class="app-bar__menu" aria-label="باز کردن منو" aria-expanded="false" type="button">
+          <md-icon aria-hidden="true">menu</md-icon>
+        </button>
       </div>
-    </nav>
+    </div>
   </header>
 
   <main class="page">
-    
+
     <section class="intro">
       <div class="intro__header" aria-hidden="true">
         <div class="intro__line intro__line--v intro__line--left" data-fade="top"></div>
         <div class="intro__line intro__line--v intro__line--right" data-fade="top"></div>
       </div>
       <div class="intro__body intro__line--top">
+        <div class="intro__version">
+          <span class="material-symbols-outlined" aria-hidden="true" data-no-i18n>verified</span>
+          <span>نسخه 1.0.1</span>
+        </div>
         <svg class="intro__circle intro__circle--tl" aria-hidden="true" fill="none" height="75" viewBox="0 0 75 75" width="75"><path d="M74 37.5C74 30.281 71.8593 23.2241 67.8486 17.2217C63.838 11.2193 58.1375 6.541 51.4679 3.7784C44.7984 1.0158 37.4595 0.292977 30.3792 1.70134C23.2989 3.1097 16.7952 6.58599 11.6906 11.6906C6.58599 16.7952 3.1097 23.2989 1.70134 30.3792C0.292977 37.4595 1.0158 44.7984 3.7784 51.4679C6.541 58.1375 11.2193 63.838 17.2217 67.8486C23.2241 71.8593 30.281 74 37.5 74" opacity="var(--line-opacity)" stroke="url(#gc-tl)" stroke-dasharray="2 2"/><defs><radialGradient cx="0" cy="0" gradientTransform="translate(37.5 37.5) rotate(90) scale(36.5)" gradientUnits="userSpaceOnUse" id="gc-tl" r="1"><stop/><stop offset="0.5" stop-opacity="0.34"/><stop offset="1"/></radialGradient></defs></svg>
         <div class="intro__line intro__line--v intro__line--left" data-fade="true" data-offset="true"></div>
 
-        <h1 class="intro__title intro__line--bottom">
+        <h1 class="intro__title intro__line--bottom md-typescale-display-medium">
           مجموعه امنیتی وردپرس <span class="intro__break"></span>برای وب
           <svg class="intro__circle intro__circle--br" aria-hidden="true" fill="none" height="75" viewBox="0 0 75 75" width="75"><path d="M74 37.5C74 30.281 71.8593 23.2241 67.8486 17.2217C63.838 11.2193 58.1375 6.541 51.4679 3.7784C44.7984 1.0158 37.4595 0.292977 30.3792 1.70134C23.2989 3.1097 16.7952 6.58599 11.6906 11.6906C6.58599 16.7952 3.1097 23.2989 1.70134 30.3792C0.292977 37.4595 1.0158 44.7984 3.7784 51.4679C6.541 58.1375 11.2193 63.838 17.2217 67.8486C23.2241 71.8593 30.281 74 37.5 74" opacity="var(--line-opacity)" stroke="url(#gc-br)" stroke-dasharray="2 2"/><defs><radialGradient cx="0" cy="0" gradientTransform="translate(37.5 37.5) rotate(90) scale(36.5)" gradientUnits="userSpaceOnUse" id="gc-br" r="1"><stop/><stop offset="0.5" stop-opacity="0.34"/><stop offset="1"/></radialGradient></defs></svg>
         </h1>
 
-        <div class="intro__subtitle intro__line--bottom">
-          <p>نت‌گارد یک پلتفرم امنیتی ماژولار برای وردپرس است با <strong>داشبورد مدیریتی ری‌اکت</strong>، رابط REST API، فایروال WAF، اسکنر بدافزار، زیروتراست و SIEM.</p>
+        <div class="intro__subtitle intro__line--bottom md-typescale-body-large">
+          <p>نت‌گارد یک پلتفرم امنیتی ماژولار برای وردپرس است با <strong>داشبورد مدیریتی ری‌اکت</strong>، هوش مصنوعی امنیتی، فایروال WAF، اسکنر بدافزار، زیروتراست و SIEM.</p>
         </div>
 
         <div class="intro__footer intro__line--bottom">
@@ -55,8 +73,12 @@
             <div class="intro__line intro__line--v intro__line--right" data-fade="true" data-offset="true"></div>
             <svg class="intro__circle intro__circle--br-sm" aria-hidden="true" fill="none" height="75" viewBox="0 0 75 75" width="75"><path d="M74 37.5C74 30.281 71.8593 23.2241 67.8486 17.2217C63.838 11.2193 58.1375 6.541 51.4679 3.7784C44.7984 1.0158 37.4595 0.292977 30.3792 1.70134C23.2989 3.1097 16.7952 6.58599 11.6906 11.6906C6.58599 16.7952 3.1097 23.2989 1.70134 30.3792C0.292977 37.4595 1.0158 44.7984 3.7784 51.4679C6.541 58.1375 11.2193 63.838 17.2217 67.8486C23.2241 71.8593 30.281 74 37.5 74" opacity="var(--line-opacity)" stroke="url(#gc-br2)" stroke-dasharray="2 2"/><defs><radialGradient cx="0" cy="0" gradientTransform="translate(37.5 37.5) rotate(90) scale(36.5)" gradientUnits="userSpaceOnUse" id="gc-br2" r="1"><stop/><stop offset="0.5" stop-opacity="0.34"/><stop offset="1"/></radialGradient></defs></svg>
             <div class="intro__cta">
-              <a href="https://rastchin.com" class="btn btn--primary" target="_blank" rel="noopener">شروع کنید</a>
-              <a href="#features" class="btn btn--outline">آشنایی با نت‌گارد</a>
+              <a class="btn-anchor" href="https://rastchin.com" target="_blank" rel="noopener">
+                <md-filled-button>شروع کنید</md-filled-button>
+              </a>
+              <a class="btn-anchor" href="#features">
+                <md-outlined-button>آشنایی با نت‌گارد</md-outlined-button>
+              </a>
             </div>
           </div>
         </div>
@@ -65,136 +87,216 @@
       </div>
     </section>
 
-    
+
     <section class="features" id="features">
       <div class="features__main">
         <div class="features__heading">
-          <h2 data-main-heading>نت‌گارد چه امکاناتی دارد؟</h2>
-          <p data-main-paragraph>چهارده ماژول مدیریتی، هفت سرویس هسته پلتفرم و یک لایه امنیتی یکپارچه برای وردپرس.</p>
+          <h2 class="md-typescale-headline-large" data-main-heading>نت‌گارد چه امکاناتی دارد؟</h2>
+          <p class="md-typescale-body-large" data-main-paragraph>شانزده ماژول امنیتی، سه لایه حفاظتی و یک پلتفرم یکپارچه برای وردپرس.</p>
         </div>
         <div class="features__grid features__grid--3">
-          
+
           <div class="features__col">
-            <a class="feature-card feature-card--sketch" href="#core">
-              <div data-illustration data-sketch="api"></div>
-              <div data-title>رابط REST API</div>
-              <div data-subtitle>اندپوینت‌های <code>netguard/v1</code> برای همه ماژول‌ها؛ ادغام فایروال، اسکن، رویداد، تنظیمات و مانیتورینگ از هر کلاینت یا اتوماسیون.</div>
-            </a>
-            <a class="feature-card feature-card--sketch" href="#core">
-              <div data-illustration data-sketch="events"></div>
-              <div data-title>سیستم رویداد</div>
-              <div data-subtitle>اتوبوس رویداد داخلی متصل به هوک‌های وردپرس؛ هر ماژول می‌تواند رویداد امنیتی منتشر و دریافت کند.</div>
-            </a>
-            <a class="feature-card feature-card--sketch" href="#core">
-              <div data-illustration data-sketch="error"></div>
-              <div data-title>مدیریت خطا</div>
-              <div data-subtitle>بررسی‌های نصب، رابط خطای تیره با مراحل رفع، و عیب‌یابی هدایت‌شده هنگام پیکربندی نادرست یا کمبود وابستگی‌ها.</div>
-            </a>
-            <a class="feature-card feature-card--sketch" href="#core">
-              <div data-illustration data-sketch="integrity"></div>
-              <div data-title>یکپارچگی افزونه</div>
-              <div data-subtitle>بررسی SHA-256 بر اساس مانیفست و خط مبنا در زمان اجرا برای تشخیص تغییر فایل‌های افزونه قبل از آسیب به سایت.</div>
-            </a>
-            <a class="feature-card feature-card--sketch" href="#core">
-              <div data-illustration data-sketch="cron"></div>
-              <div data-title>لاگ ساختاریافته و کران</div>
-              <div data-subtitle>اسکن بدافزار، بررسی یکپارچگی و پاک‌سازی لاگ‌ها در پس‌زمینه با کران وردپرس؛ لاگ‌های ساختاریافته و قابل جست‌وجو.</div>
-            </a>
-            <a class="feature-card feature-card--sketch" href="#core">
-              <div data-illustration data-sketch="license"></div>
-              <div data-title>لایسنس و به‌روزرسانی</div>
-              <div data-subtitle>پشتیبانی از لایسنس RTL، ionCube Loader و مدیریت به‌روزرسانی؛ آماده برای زمان فعال‌سازی لایسنس.</div>
-            </a>
-            <a class="feature-card feature-card--sketch" href="#authentication">
-              <div data-illustration data-sketch="auth"></div>
-              <div data-title>احراز هویت و دسترسی</div>
-              <div data-subtitle>محافظت در برابر بروت‌فورس، ردیابی تلاش ورود، قفل IP، احراز هویت دومرحله‌ای TOTP، پایش نشست و اثرانگشت دستگاه.</div>
+            <div class="feature-card feature-card--sketch">
+              <md-outlined-card>
+                <div class="feature-card__body">
+                  <div data-illustration data-sketch="threatintel"></div>
+                  <div data-title>هوش تهدید</div>
+                  <div data-subtitle>پایگاه داده IoC، موتور اعتبارسنجی تهدید و فیدهای GreyNoise و MISP برای تشخیص IPها، دامنه‌ها و URLهای مخرب.</div>
+                </div>
+              </md-outlined-card>
+            </div>
+            <div class="feature-card feature-card--sketch">
+              <md-outlined-card>
+                <div class="feature-card__body">
+                  <div data-illustration data-sketch="learning"></div>
+                  <div data-title>حالت یادگیری فایروال</div>
+                  <div data-subtitle>فایروال هوشمند با یادگیری الگوی ترافیک سالم؛ شناسایی و مسدودسازی خودکار رفتارهای مخرب.</div>
+                </div>
+              </md-outlined-card>
+            </div>
+            <div class="feature-card feature-card--sketch">
+              <md-outlined-card>
+                <div class="feature-card__body">
+                  <div data-illustration data-sketch="geo"></div>
+                  <div data-title>مسدودسازی بر اساس کشور</div>
+                  <div data-subtitle>کنترل دسترسی جغرافیایی با فیلتر کشورها و مسدودسازی ترافیک از مناطق پرریسک.</div>
+                </div>
+              </md-outlined-card>
+            </div>
+            <div class="feature-card feature-card--sketch">
+              <md-outlined-card>
+                <div class="feature-card__body">
+                  <div data-illustration data-sketch="integrity"></div>
+                  <div data-title>یکپارچگی افزونه</div>
+                  <div data-subtitle>بررسی SHA-256 بر اساس مانیفست و خط مبنا در زمان اجرا برای تشخیص تغییر فایل‌های افزونه قبل از آسیب به سایت.</div>
+                </div>
+              </md-outlined-card>
+            </div>
+            <div class="feature-card feature-card--sketch">
+              <md-outlined-card>
+                <div class="feature-card__body">
+                  <div data-illustration data-sketch="backup"></div>
+                  <div data-title>پشتیبان‌گیری و بازیابی</div>
+                  <div data-subtitle>پشتیبان‌گیری زمان‌بندی‌شده از تنظیمات، محتوا و دیتابیس؛ رمزنگاری، ذخیره‌سازی Offsite با S3 و بازیابی پشتیبان.</div>
+                </div>
+              </md-outlined-card>
+            </div>
+            <div class="feature-card feature-card--sketch">
+              <md-outlined-card>
+                <div class="feature-card__body">
+                  <div data-illustration data-sketch="events"></div>
+                  <div data-title>مدیریت Multisite</div>
+                  <div data-subtitle>پشتیبانی از WordPress Multisite با مدیریت متمرکز سیاست‌های امنیتی، اعمال خودکار و همگام‌سازی Edge WAF.</div>
+                </div>
+              </md-outlined-card>
+            </div>
+            <a class="feature-card feature-card--sketch" href="#showcase">
+              <md-outlined-card>
+                <div class="feature-card__body">
+                  <div data-illustration data-sketch="auth"></div>
+                  <div data-title>احراز هویت و دسترسی</div>
+                  <div data-subtitle>محافظت در برابر بروت‌فورس، ردیابی تلاش ورود، قفل IP، احراز هویت دومرحله‌ای TOTP، پایش نشست و اثرانگشت دستگاه.</div>
+                </div>
+              </md-outlined-card>
             </a>
           </div>
 
-          
+
           <div class="features__col">
-            <a class="feature-card feature-card--sketch" href="#dashboard">
-              <div data-illustration data-sketch="dashboard"></div>
-              <div data-title>داشبورد و نمای کلی</div>
-              <div data-subtitle>امتیاز امنیت، شاخص‌های کلیدی، وضعیت ماژول‌ها، رویدادهای زنده و بررسی سلامت سیستم در یک نگاه.</div>
+            <a class="feature-card feature-card--sketch" href="#showcase">
+              <md-outlined-card>
+                <div class="feature-card__body">
+                  <div data-illustration data-sketch="dashboard"></div>
+                  <div data-title>داشبورد و نمای کلی</div>
+                  <div data-subtitle>امتیاز امنیت، شاخص‌های کلیدی، وضعیت ماژول‌ها، رویدادهای زنده و بررسی سلامت سیستم در یک نگاه.</div>
+                </div>
+              </md-outlined-card>
             </a>
-            <a class="feature-card feature-card--sketch" href="#firewall">
-              <div data-illustration data-sketch="firewall"></div>
-              <div data-title>فایروال (WAF)</div>
-              <div data-subtitle>تشخیص SQLi، XSS، RCE و Path Traversal؛ مسدودسازی آپلود مخرب، فیلتر بات بد، محافظت XML-RPC، رتبه‌بندی IP و محدودسازی نرخ.</div>
+            <div class="feature-card feature-card--sketch">
+              <md-outlined-card>
+                <div class="feature-card__body">
+                  <div data-illustration data-sketch="firewall"></div>
+                  <div data-title>فایروال (WAF)</div>
+                  <div data-subtitle>تشخیص SQLi، XSS، RCE و Path Traversal؛ مسدودسازی آپلود مخرب، فیلتر بات بد، محافظت XML-RPC، رتبه‌بندی IP و محدودسازی نرخ.</div>
+                </div>
+              </md-outlined-card>
+            </div>
+            <a class="feature-card feature-card--callout" href="#showcase">
+              <md-elevated-card>
+                <div class="feature-card__body">
+                  <div data-illustration data-sketch="react"></div>
+                  <div data-title>داشبورد مدیریتی ری‌اکت</div>
+                  <div data-subtitle>رابط Material Design 3 با داده زنده، پشتیبانی چندزبانه (FA/EN)، حالت تیره/روشن و سازگاری کامل RTL.</div>
+                </div>
+              </md-elevated-card>
             </a>
-            <a class="feature-card feature-card--callout" href="#dashboard">
-              <div data-illustration data-sketch="react"></div>
-              <div data-title>داشبورد مدیریتی ری‌اکت</div>
-              <div data-subtitle>رابط Material Design 3 با داده زنده، پشتیبانی چندزبانه (FA/EN)، حالت تیره/روشن و سازگاری کامل RTL.</div>
+            <a class="feature-card feature-card--sketch" href="#showcase">
+              <md-outlined-card>
+                <div class="feature-card__body">
+                  <div data-illustration data-sketch="scanner"></div>
+                  <div data-title>اسکنر و حفاظت بدافزار</div>
+                  <div data-subtitle>هسته امضا و تحلیل رفتاری با اتصال اختیاری VirusTotal؛ اسکن زمان‌بندی‌شده، شروع دستی، مدیریت قرنطینه و تاریخچه اسکن.</div>
+                </div>
+              </md-outlined-card>
             </a>
-            <a class="feature-card feature-card--sketch" href="#scanner">
-              <div data-illustration data-sketch="scanner"></div>
-              <div data-title>اسکنر و حفاظت بدافزار</div>
-              <div data-subtitle>هسته امضا و تحلیل رفتاری با اتصال اختیاری VirusTotal؛ اسکن زمان‌بندی‌شده، شروع دستی، مدیریت قرنطینه و تاریخچه اسکن.</div>
+            <a class="feature-card feature-card--sketch" href="#templates">
+              <md-outlined-card>
+                <div class="feature-card__body">
+                  <div data-illustration data-sketch="quarantine"></div>
+                  <div data-title>قرنطینه و پاک‌سازی</div>
+                  <div data-subtitle>قرنطینه خودکار فایل‌های آلوده، بازیابی فایل‌های قرنطینه‌شده و حذف بدافزار؛ محافظت از مسیرهای حساس.</div>
+                </div>
+              </md-outlined-card>
             </a>
-            <a class="feature-card feature-card--sketch" href="#sandbox">
-              <div data-illustration data-sketch="sandbox"></div>
-              <div data-title>سه لایه محافظتی</div>
-              <div data-subtitle>Sandbox · Security · Network</div>
-            </a>
-            <a class="feature-card feature-card--sketch" href="#threat-modeling">
-              <div data-illustration data-sketch="threatmodel"></div>
-              <div data-title>مدل‌سازی تهدید</div>
-              <div data-subtitle>رجیستری مدل تهدید با به‌روزرسانی خودکار و صفحه اختصاصی تحلیل سطح حمله.</div>
-            </a>
-            <a class="feature-card feature-card--sketch" href="#vulnerability">
-              <div data-illustration data-sketch="vulnerability"></div>
-              <div data-title>مدیریت آسیب‌پذیری</div>
-              <div data-subtitle>اسکنر آسیب‌پذیری به‌همراه مدیر CVE و اسکن دوره‌ای برای هسته، افزونه‌ها و پوسته‌ها.</div>
+            <div class="feature-card feature-card--sketch">
+              <md-outlined-card>
+                <div class="feature-card__body">
+                  <div data-illustration data-sketch="threatmodel"></div>
+                  <div data-title>مدل‌سازی تهدید</div>
+                  <div data-subtitle>رجیستری مدل تهدید با به‌روزرسانی خودکار و صفحه اختصاصی تحلیل سطح حمله.</div>
+                </div>
+              </md-outlined-card>
+            </div>
+            <a class="feature-card feature-card--sketch" href="#showcase">
+              <md-outlined-card>
+                <div class="feature-card__body">
+                  <div data-illustration data-sketch="vulnerability"></div>
+                  <div data-title>مدیریت آسیب‌پذیری</div>
+                  <div data-subtitle>اسکنر آسیب‌پذیری به‌همراه مدیر CVE و اسکن دوره‌ای برای هسته، افزونه‌ها و پوسته‌ها.</div>
+                </div>
+              </md-outlined-card>
             </a>
           </div>
 
-          
+
           <div class="features__col">
-            <a class="feature-card feature-card--sketch" href="#security-layer">
-              <div data-illustration data-sketch="zerotrust"></div>
-              <div data-title>زیروتراست و لایه امنیتی</div>
-              <div data-subtitle>امتیازدهی ریسک برای هر درخواست/عملیات با سطح اعتماد بالا، متوسط و پایین بر اساس دستگاه، زمان، تغییر فایل و SSL.</div>
-            </a>
-            <a class="feature-card feature-card--sketch" href="#siem">
-              <div data-illustration data-sketch="siem"></div>
-              <div data-title>پایش و SIEM</div>
-              <div data-subtitle>مانیتورینگ لحظه‌ای فعالیت‌ها، ردیابی تغییرات کاربر/افزونه/پوسته و تحلیل SIEM با نمودار و تایم‌لاین.</div>
-            </a>
-            <a class="feature-card feature-card--sketch" href="#audit">
-              <div data-illustration data-sketch="audit"></div>
-              <div data-title>ممیزی و انطباق</div>
-              <div data-subtitle>لاگ ممیزی پایدار با سطح شدت، قابلیت جست‌وجو، فیلتر، خروجی و نگه‌داری قابل تنظیم.</div>
-            </a>
-            <a class="feature-card feature-card--sketch" href="#advisory">
-              <div data-illustration data-sketch="ai"></div>
-              <div data-title>امنیت و مشاوره هوش مصنوعی</div>
-              <div data-subtitle>طبقه‌بند تهدید، مشاور امنیتی و صفحه راهنمای مبتنی بر AI با امکان توسعه برای ML/LLM.</div>
-            </a>
-            <a class="feature-card feature-card--sketch" href="#settings">
-              <div data-illustration data-sketch="settings"></div>
-              <div data-title>تنظیمات و مدیریت</div>
-              <div data-subtitle>تنظیمات مرکزی همه ماژول‌ها، اعلان ایمیلی اختیاری مدیر، پشتیبانی چندزبانه و RTL.</div>
-            </a>
+            <div class="feature-card feature-card--sketch">
+              <md-outlined-card>
+                <div class="feature-card__body">
+                  <div data-illustration data-sketch="zerotrust"></div>
+                  <div data-title>زیروتراست و لایه امنیتی</div>
+                  <div data-subtitle>امتیازدهی ریسک برای هر درخواست/عملیات با سطح اعتماد بالا، متوسط و پایین بر اساس دستگاه، زمان، تغییر فایل و SSL.</div>
+                </div>
+              </md-outlined-card>
+            </div>
+            <div class="feature-card feature-card--sketch">
+              <md-outlined-card>
+                <div class="feature-card__body">
+                  <div data-illustration data-sketch="siem"></div>
+                  <div data-title>پایش و SIEM</div>
+                  <div data-subtitle>مانیتورینگ لحظه‌ای فعالیت‌ها، ردیابی تغییرات کاربر/افزونه/پوسته و تحلیل SIEM با نمودار و تایم‌لاین.</div>
+                </div>
+              </md-outlined-card>
+            </div>
+            <div class="feature-card feature-card--sketch">
+              <md-outlined-card>
+                <div class="feature-card__body">
+                  <div data-illustration data-sketch="compliance"></div>
+                  <div data-title>انطباق امنیتی</div>
+                  <div data-subtitle>چارچوب‌های انطباق SOC 2، ISO 27001 و PCI DSS با بررسی وضعیت، امتیازدهی و گزارش PDF/CSV.</div>
+                </div>
+              </md-outlined-card>
+            </div>
+            <div class="feature-card feature-card--sketch">
+              <md-outlined-card>
+                <div class="feature-card__body">
+                  <div data-illustration data-sketch="ai"></div>
+                  <div data-title>امنیت و مشاوره هوش مصنوعی</div>
+                  <div data-subtitle>طبقه‌بند تهدید، مشاور امنیتی و صفحه راهنمای مبتنی بر AI با امکان توسعه برای ML/LLM.</div>
+                </div>
+              </md-outlined-card>
+            </div>
+            <div class="feature-card feature-card--sketch">
+              <md-outlined-card>
+                <div class="feature-card__body">
+                  <div data-illustration data-sketch="captcha"></div>
+                  <div data-title>CAPTCHA و مدیریت ربات</div>
+                  <div data-subtitle>CAPTCHA داخلی، ریاضی، Cloudflare Turnstile، hCaptcha و Google reCAPTCHA؛ مسدودسازی ربات‌ها و درخواست‌های خودکار.</div>
+                </div>
+              </md-outlined-card>
+            </div>
             <a class="feature-card feature-card--next" href="https://rastchin.com" target="_blank" rel="noopener">
-              <div data-illustration>
-                <div class="switchboard" id="switchboard"></div>
-              </div>
-              <div data-title>معماری ماژولار</div>
-              <div data-subtitle>فایروال، احراز هویت، اسکنر، پایش، ممیزی، آسیب‌پذیری، زیروتراست، AI، سندباکس و بیشتر؛ یک افزونه با ۱۴ صفحه مدیریتی.</div>
-              <div data-button><span class="material-symbols-outlined icon-md" aria-hidden="true">arrow_forward</span></div>
+              <md-elevated-card>
+                <div class="feature-card__body">
+                  <div data-illustration>
+                    <div class="switchboard" id="switchboard"></div>
+                  </div>
+                  <div data-title>معماری ماژولار</div>
+                  <div data-subtitle>فایروال، احراز هویت، اسکنر، پایش، ممیزی، آسیب‌پذیری، زیروتراست، AI، سندباکس و بیشتر؛ یک افزونه با ۱۶ ماژول امنیتی در ۳ لایه حفاظتی.</div>
+                  <div data-button><span class="material-symbols-outlined icon-md" aria-hidden="true">arrow_forward</span></div>
+                </div>
+              </md-elevated-card>
             </a>
           </div>
         </div>
       </div>
     </section>
 
-    
+
     <section class="foundation">
       <div class="foundation__main">
-        <h2 class="foundation__title">ساخته‌شده بر پایه ابزارهای سریع <span data-break></span>و آماده محیط واقعی</h2>
+        <h2 class="foundation__title md-typescale-headline-large">ساخته‌شده بر پایه ابزارهای سریع <span data-break></span>و آماده محیط واقعی</h2>
         <div class="foundation__illustration">
           <svg id="foundation-lines" class="foundation__lines" fill="none" height="264" viewBox="0 0 891 264" width="891" aria-hidden="true">
             <path class="foundation-line" data-delay="0.1" d="M388 96L388 68C388 65.7909 386.209 64 384 64L310 64" stroke="var(--geist-foreground)" stroke-opacity="0.1"/>
@@ -279,37 +381,51 @@
           </div>
         </div>
         <div class="foundation__cards">
-          <a class="foundation-card" data-variant="react" href="#">
-            <div data-icon><span class="material-symbols-outlined icon-lg" aria-hidden="true">dashboard</span></div>
-            <div data-title>داشبورد ری‌اکت</div>
-            <div data-subtitle>رابط مدیریتی Material Design 3 با داده زنده، امتیاز امنیت، وضعیت ماژول‌ها و سلامت سیستم.</div>
-          </a>
-          <a class="foundation-card" data-variant="turbo" href="#">
-            <div data-icon><span class="material-symbols-outlined icon-lg" aria-hidden="true">api</span></div>
-            <div data-title>REST API</div>
-            <div data-subtitle>اندپوینت‌های <code>netguard/v1</code> برای همه ماژول‌ها جهت ادغام قوانین فایروال، اسکن، رویداد و تنظیمات.</div>
-          </a>
-          <a class="foundation-card" data-variant="swc" href="#">
-            <div data-icon><span class="material-symbols-outlined icon-lg" aria-hidden="true">hub</span></div>
-            <div data-title>سیستم رویداد</div>
-            <div data-subtitle>اتوبوس رویداد داخلی با هوک‌های وردپرس، لاگ ساختاریافته، بررسی SHA-256 و اجرای کران در پس‌زمینه.</div>
-          </a>
+          <div class="foundation-card">
+            <md-outlined-card>
+              <div class="foundation-card__body">
+                <div data-illustration><span class="material-symbols-outlined" aria-hidden="true">dashboard</span></div>
+                <div data-title>داشبورد ری‌اکت</div>
+                <div data-subtitle>رابط مدیریتی Material Design 3 با داده زنده، امتیاز امنیت، وضعیت ماژول‌ها و سلامت سیستم.</div>
+              </div>
+            </md-outlined-card>
+          </div>
+          <div class="foundation-card">
+            <md-outlined-card>
+              <div class="foundation-card__body">
+                <div data-illustration><span class="material-symbols-outlined" aria-hidden="true">receipt_long</span></div>
+                <div data-title>لاگ ممیزی</div>
+                <div data-subtitle>ثبت پایدار رویدادهای امنیتی، ورودها و تغییرات مدیریتی با سطح شدت، جستجو، فیلتر و خروجی JSON/CSV/PDF.</div>
+              </div>
+            </md-outlined-card>
+          </div>
+          <div class="foundation-card">
+            <md-outlined-card>
+              <div class="foundation-card__body">
+                <div data-illustration><span class="material-symbols-outlined" aria-hidden="true">hub</span></div>
+                <div data-title>سیستم رویداد</div>
+                <div data-subtitle>اتوبوس رویداد داخلی با هوک‌های وردپرس، لاگ ساختاریافته، بررسی SHA-256 و اجرای کران در پس‌زمینه.</div>
+              </div>
+            </md-outlined-card>
+          </div>
         </div>
       </div>
     </section>
 
-    
-    <section class="templates">
+
+    <section class="templates" id="templates">
       <div class="templates__main">
-        <h2 data-main-heading>سه لایه محافظتی</h2>
-        <p data-main-paragraph>نت‌گارد دفاع وردپرس را در سه سطح پیوسته، از اجرای امن تا کنترل ترافیک، مدیریت می‌کند.</p>
+        <h2 class="md-typescale-headline-large" data-main-heading>سه لایه محافظتی</h2>
+        <p class="md-typescale-body-large" data-main-paragraph>نت‌گارد دفاع وردپرس را در سه سطح پیوسته، از اجرای امن تا کنترل ترافیک، مدیریت می‌کند.</p>
         <div class="templates__deploy">
           <div class="templates__text">
-            <h3>Sandbox · Security · Network</h3>
-            <p class="templates__subtext"><strong>Sandbox</strong> فایل‌ها، افزونه‌ها و عملیات حساس را پیش از اجرا در محیطی ایزوله تحلیل می‌کند تا ریسک تغییرات مشکوک به سایت منتقل نشود.</p>
-            <p class="templates__subtext"><strong>Security</strong> لایه اصلی دفاع وردپرس را با فایروال، احراز هویت، اسکن بدافزار و مدیریت آسیب‌پذیری‌ها یکپارچه می‌سازد.</p>
-            <p class="templates__subtext"><strong>Network</strong> ترافیک ورودی، IPهای پرریسک و درخواست‌های غیرعادی را پایش می‌کند تا فشار حملات پیش از رسیدن به هسته سایت کنترل شود.</p>
-            <a href="https://rastchin.com" class="btn btn--primary" target="_blank" rel="noopener">خرید از راست‌چین</a>
+            <h3 class="md-typescale-title-large">Sandbox · Security · Network</h3>
+            <p class="templates__subtext md-typescale-body-large"><strong>Sandbox</strong> فایل‌ها، افزونه‌ها و عملیات حساس را پیش از اجرا در محیطی ایزوله تحلیل می‌کند تا ریسک تغییرات مشکوک به سایت منتقل نشود.</p>
+            <p class="templates__subtext md-typescale-body-large"><strong>Security</strong> لایه اصلی دفاع وردپرس را با فایروال، احراز هویت، اسکن بدافزار و مدیریت آسیب‌پذیری‌ها یکپارچه می‌سازد.</p>
+            <p class="templates__subtext md-typescale-body-large"><strong>Network</strong> ترافیک ورودی، IPهای پرریسک و درخواست‌های غیرعادی را پایش می‌کند تا فشار حملات پیش از رسیدن به هسته سایت کنترل شود.</p>
+            <a class="btn-anchor" href="https://rastchin.com" target="_blank" rel="noopener">
+              <md-filled-button>خرید از راست‌چین</md-filled-button>
+            </a>
           </div>
           <div class="templates__sketch" aria-hidden="true">
             <svg class="templates__sketch-svg" viewBox="0 0 268 212" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -338,70 +454,86 @@
     </section>
 
     <section class="customers" id="showcase">
-      <h2 class="customers__title">وقتی امنیت مهم است، <span data-break></span>انتخاب اول شما</h2>
+      <h2 class="customers__title md-typescale-headline-large">وقتی امنیت مهم است، <span data-break></span>انتخاب اول شما</h2>
 
       <div class="showcase">
         <div class="showcase__grid">
           <div class="showcase__col">
             <div class="showcase__preview showcase__preview--lg">
-              <div class="showcase__media">
-                <img src="assets/showcase/auth.png" alt="تصویر ماژول احراز هویت نت‌گارد" loading="lazy">
-              </div>
+              <md-elevated-card>
+                <div class="showcase__media">
+                  <img src="assets/showcase/auth.png" alt="تصویر ماژول احراز هویت نت‌گارد" loading="lazy">
+                </div>
+              </md-elevated-card>
             </div>
             <div class="showcase__preview showcase__preview--portrait">
-              <div class="showcase__media">
-                <img src="assets/showcase/dashboard-mobile.png" alt="تصویر داشبورد امنیتی نت‌گارد در موبایل" loading="lazy">
-              </div>
+              <md-elevated-card>
+                <div class="showcase__media">
+                  <img src="assets/showcase/dashboard-mobile.png" alt="تصویر داشبورد امنیتی نت‌گارد در موبایل" loading="lazy">
+                </div>
+              </md-elevated-card>
             </div>
           </div>
           <div class="showcase__col showcase__col--center">
             <div class="showcase__preview showcase__preview--xl">
-              <div class="showcase__media">
-                <img src="assets/showcase/dashboard.png" alt="تصویر داشبورد امنیتی نت‌گارد" loading="lazy">
-              </div>
+              <md-elevated-card>
+                <div class="showcase__media">
+                  <img src="assets/showcase/dashboard.png" alt="تصویر داشبورد امنیتی نت‌گارد" loading="lazy">
+                </div>
+              </md-elevated-card>
             </div>
           </div>
           <div class="showcase__col">
             <div class="showcase__preview showcase__preview--lg">
-              <div class="showcase__media">
-                <img src="assets/showcase/vulnerability.png" alt="تصویر اسکنر آسیب‌پذیری نت‌گارد" loading="lazy">
-              </div>
+              <md-elevated-card>
+                <div class="showcase__media">
+                  <img src="assets/showcase/vulnerability.png" alt="تصویر اسکنر آسیب‌پذیری نت‌گارد" loading="lazy">
+                </div>
+              </md-elevated-card>
             </div>
             <div class="showcase__row">
               <div class="showcase__preview showcase__preview--portrait">
-                <div class="showcase__media">
-                  <img src="assets/showcase/scanner-mobile.png" alt="تصویر اسکنر بدافزار نت‌گارد در موبایل" loading="lazy">
-                </div>
+                <md-elevated-card>
+                  <div class="showcase__media">
+                    <img src="assets/showcase/scanner-mobile.png" alt="تصویر اسکنر بدافزار نت‌گارد در موبایل" loading="lazy">
+                  </div>
+                </md-elevated-card>
               </div>
               <div class="showcase__preview showcase__preview--portrait">
-                <div class="showcase__media">
-                  <img src="assets/showcase/twofa.png" alt="تصویر احراز هویت دومرحله‌ای نت‌گارد" loading="lazy">
-                </div>
+                <md-elevated-card>
+                  <div class="showcase__media">
+                    <img src="assets/showcase/twofa.png" alt="تصویر احراز هویت دومرحله‌ای نت‌گارد" loading="lazy">
+                  </div>
+                </md-elevated-card>
               </div>
             </div>
           </div>
           <div class="showcase__col">
             <div class="showcase__preview showcase__preview--lg">
-              <div class="showcase__media">
-                <img src="assets/showcase/scanner-desktop.png" alt="تصویر اسکنر بدافزار نت‌گارد" loading="lazy">
-              </div>
+              <md-elevated-card>
+                <div class="showcase__media">
+                  <img src="assets/showcase/scanner-desktop.png" alt="تصویر اسکنر بدافزار نت‌گارد" loading="lazy">
+                </div>
+              </md-elevated-card>
             </div>
             <div class="showcase__preview showcase__preview--md">
-              <div class="showcase__media">
-                <img src="assets/showcase/scanner-light.png" alt="تصویر نسخه بومی‌سازی‌شده اسکنر بدافزار نت‌گارد" loading="lazy">
-              </div>
+              <md-elevated-card>
+                <div class="showcase__media">
+                  <img src="assets/showcase/scanner-light.png" alt="تصویر نسخه بومی‌سازی‌شده اسکنر بدافزار نت‌گارد" loading="lazy">
+                </div>
+              </md-elevated-card>
             </div>
           </div>
         </div>
       </div>
 
-      <p class="customers__subtitle">برای <strong>محافظت</strong>، <strong>دیدپذیری</strong> و <strong>کنترل</strong>. <span data-break></span>نت‌گارد امنیت در سطح سازمانی را به وردپرس می‌آورد.</p>
+      <p class="customers__subtitle md-typescale-body-large">برای <strong>محافظت</strong>، <strong>دیدپذیری</strong> و <strong>کنترل</strong>. <span data-break></span>نت‌گارد امنیت در سطح سازمانی را به وردپرس می‌آورد.</p>
 
     </section>
 
   </main>
 
-  
+
   <footer class="footer">
     <div class="footer__inner">
       <div class="footer__grid">

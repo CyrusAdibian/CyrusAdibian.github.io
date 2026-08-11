@@ -7,216 +7,349 @@
   <meta name="description" content="مدیریت خطای نت‌گارد: محل نمایش خطاها، سطح شدت و راه‌حل مرحله‌به‌مرحله برای مشکلات نصب، یکپارچگی، داشبورد و API.">
   <link rel="icon" href="assets/icon.png" type="image/png" sizes="512x512">
   <link rel="apple-touch-icon" href="assets/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hemedani/yekan@v3.0.0/font-face.css">
   <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/material-web.bundle.js"></script>
 </head>
 <body>
-  <header class="header">
-    <nav class="nav">
-      <a href="index.html" class="nav__logo" aria-label="رفتن به صفحه اصلی">
-        <img src="assets/icon.png" alt="" width="44" height="44" class="site-icon">
-        <span>نت‌گارد</span>
+  <header class="app-bar">
+    <div class="app-bar__inner">
+      <a href="index.html" class="app-bar__brand" aria-label="رفتن به صفحه اصلی">
+        <img src="assets/icon.png" alt="" width="40" height="40" class="site-icon">
+        <span class="app-bar__brand-text">نت‌گارد</span>
       </a>
-      <div class="nav__links">
+      <nav class="app-bar__nav" aria-label="ناوبری اصلی">
         <a href="index.html#features">مستندات</a>
         <a href="installation-guide.html">نصب</a>
-        <a href="troubleshooting.html">عیب‌یابی</a>
-      </div>
-      <div class="nav__actions">
-        <a href="https://rastchin.com" class="btn btn--outline btn--sm" target="_blank" rel="noopener">خرید</a>
+        <a href="troubleshooting.html" class="is-active">عیب‌یابی</a>
+      </nav>
+      <div class="app-bar__actions">
+        <a class="btn-anchor" href="https://rastchin.com" target="_blank" rel="noopener">
+          <md-filled-tonal-button>خرید</md-filled-tonal-button>
+        </a>
         <button class="lang-toggle" type="button" data-lang-toggle data-no-i18n aria-label="Switch language">EN</button>
-        <button class="nav__menu" aria-label="باز کردن منو" type="button"><span class="material-symbols-outlined" aria-hidden="true">menu</span></button>
+        <md-icon-button toggle id="theme-toggle" aria-label="تغییر حالت ظاهر">
+          <md-icon>light_mode</md-icon>
+          <md-icon slot="selected">dark_mode</md-icon>
+        </md-icon-button>
+        <button class="app-bar__menu" aria-label="باز کردن منو" aria-expanded="false" type="button">
+          <md-icon aria-hidden="true">menu</md-icon>
+        </button>
       </div>
-    </nav>
+    </div>
   </header>
 
   <main class="doc">
     <aside class="doc__sidebar">
       <h4>راهنماها</h4>
-      <nav>
-        <a href="installation-guide.html">راهنمای نصب</a>
-        <a href="troubleshooting.html" class="is-active">عیب‌یابی</a>
-        <a href="#where-errors-appear">محل نمایش خطاها</a>
-        <a href="#setup-errors">خطاهای نصب</a>
-        <a href="#integrity-errors">خطاهای یکپارچگی</a>
-        <a href="#dashboard-errors">داشبورد و رابط API</a>
-        <a href="#general-tips">نکات عمومی</a>
-      </nav>
+      <md-list class="doc__nav-list">
+        <md-list-item type="link" href="installation-guide.html">
+          <div slot="headline">راهنمای نصب</div>
+        </md-list-item>
+        <md-list-item type="link" href="troubleshooting.html" class="is-active">
+          <div slot="headline">عیب‌یابی</div>
+        </md-list-item>
+      </md-list>
+      <h4>موضوعات</h4>
+      <md-list class="doc__nav-list">
+        <md-list-item type="link" href="#where-errors-appear">
+          <div slot="headline">محل نمایش خطاها</div>
+        </md-list-item>
+        <md-list-item type="link" href="#setup-errors">
+          <div slot="headline">خطاهای نصب</div>
+        </md-list-item>
+        <md-list-item type="link" href="#integrity-errors">
+          <div slot="headline">خطاهای یکپارچگی</div>
+        </md-list-item>
+        <md-list-item type="link" href="#dashboard-errors">
+          <div slot="headline">داشبورد و رابط API</div>
+        </md-list-item>
+        <md-list-item type="link" href="#general-tips">
+          <div slot="headline">نکات عمومی</div>
+        </md-list-item>
+      </md-list>
     </aside>
 
     <article class="doc__content">
-      <h1>عیب‌یابی</h1>
-      <p class="doc__lead">نت‌گارد در زمان بارگذاری افزونه، محیط وردپرس را بررسی می‌کند. اگر مشکلی وجود داشته باشد، پیام خطا همراه با راه‌حل مرحله‌به‌مرحله نمایش داده می‌شود.</p>
+      <h1 class="md-typescale-headline-large">عیب‌یابی</h1>
+      <p class="doc__lead md-typescale-body-large">نت‌گارد در زمان بارگذاری افزونه، محیط وردپرس را بررسی می‌کند. اگر مشکلی وجود داشته باشد، پیام خطا همراه با راه‌حل مرحله‌به‌مرحله نمایش داده می‌شود.</p>
 
-      <h2 id="where-errors-appear">محل نمایش خطاها</h2>
-      <ul>
-        <li><strong>صفحات نت‌گارد</strong> — پنل کامل خطا یا هشدار</li>
-        <li><strong>سایر صفحات مدیریت وردپرس</strong> — اعلان مدیریتی در بالای صفحه</li>
-      </ul>
+      <h2 id="where-errors-appear" class="md-typescale-headline-small">
+        <md-icon class="doc__heading-icon" aria-hidden="true" data-no-i18n>info</md-icon>
+        محل نمایش خطاها
+      </h2>
+      <md-outlined-card class="doc__panel">
+        <md-list class="doc__list">
+          <md-list-item>
+            <md-icon slot="start" aria-hidden="true" data-no-i18n>warning</md-icon>
+            <div slot="headline">صفحات نت‌گارد</div>
+            <div slot="supporting-text">پنل کامل خطا یا هشدار</div>
+          </md-list-item>
+          <md-list-item>
+            <md-icon slot="start" aria-hidden="true" data-no-i18n>campaign</md-icon>
+            <div slot="headline">سایر صفحات مدیریت وردپرس</div>
+            <div slot="supporting-text">اعلان مدیریتی در بالای صفحه</div>
+          </md-list-item>
+        </md-list>
+      </md-outlined-card>
 
-      <h2 id="setup-errors">خطاهای نصب و پکیج</h2>
+      <h2 id="setup-errors" class="md-typescale-headline-small">خطاهای نصب و پکیج</h2>
 
       <div class="doc__error" id="php-version">
-        <h3>نسخه PHP پایین است</h3>
-        <span class="doc__label">علت</span>
-        <p>نسخه PHP سرور شما کمتر از 8.2 است.</p>
-        <span class="doc__label">راه‌حل</span>
-        <ol>
-          <li>در پنل هاست، نسخه PHP را به 8.2 یا بالاتر تغییر دهید.</li>
-          <li>در محیط محلی (XAMPP/MAMP) نسخه PHP را به‌روزرسانی کنید.</li>
-          <li>پنل وردپرس را رفرش کرده و نت‌گارد را دوباره باز کنید.</li>
-        </ol>
+        <md-elevated-card>
+          <div class="doc__error__body">
+            <h3 class="md-typescale-title-large">
+              <md-icon class="doc__error-icon" aria-hidden="true" data-no-i18n>error</md-icon>نسخه PHP پایین است</h3>
+            <span class="doc__label"><md-icon class="doc__label-icon" aria-hidden="true" data-no-i18n>manage_search</md-icon>علت</span>
+            <p>نسخه PHP سرور شما کمتر از 8.2 است.</p>
+            <span class="doc__label"><md-icon class="doc__label-icon" aria-hidden="true" data-no-i18n>build</md-icon>راه‌حل</span>
+            <ol>
+              <li>در پنل هاست، نسخه PHP را به 8.2 یا بالاتر تغییر دهید.</li>
+              <li>در محیط محلی (XAMPP/MAMP) نسخه PHP را به‌روزرسانی کنید.</li>
+              <li>پنل وردپرس را رفرش کرده و نت‌گارد را دوباره باز کنید.</li>
+            </ol>
+          </div>
+        </md-elevated-card>
       </div>
 
       <div class="doc__error" id="wp-version">
-        <h3>نسخه وردپرس پایین است</h3>
-        <span class="doc__label">علت</span>
-        <p>نسخه وردپرس شما کمتر از 6.4 است.</p>
-        <span class="doc__label">راه‌حل</span>
-        <ol>
-          <li>از سایت نسخه پشتیبان تهیه کنید.</li>
-          <li>از مسیر <strong>پیشخوان ← به‌روزرسانی‌ها</strong> وردپرس را آپدیت کنید.</li>
-          <li>دوباره نت‌گارد را اجرا کنید.</li>
-        </ol>
+        <md-elevated-card>
+          <div class="doc__error__body">
+            <h3 class="md-typescale-title-large">
+              <md-icon class="doc__error-icon" aria-hidden="true" data-no-i18n>error</md-icon>نسخه وردپرس پایین است</h3>
+            <span class="doc__label"><md-icon class="doc__label-icon" aria-hidden="true" data-no-i18n>manage_search</md-icon>علت</span>
+            <p>نسخه وردپرس شما کمتر از 6.4 است.</p>
+            <span class="doc__label"><md-icon class="doc__label-icon" aria-hidden="true" data-no-i18n>build</md-icon>راه‌حل</span>
+            <ol>
+              <li>از سایت نسخه پشتیبان تهیه کنید.</li>
+              <li>از مسیر <strong>پیشخوان ← به‌روزرسانی‌ها</strong> وردپرس را آپدیت کنید.</li>
+              <li>دوباره نت‌گارد را اجرا کنید.</li>
+            </ol>
+          </div>
+        </md-elevated-card>
       </div>
 
       <div class="doc__error" id="vendor-missing">
-        <h3>پکیج افزونه ناقص است (<code>vendor/</code> وجود ندارد)</h3>
-        <span class="doc__label">علت</span>
-        <p>پوشه <code>vendor/</code> در بسته بارگذاری‌شده وجود ندارد.</p>
-        <span class="doc__label">راه‌حل</span>
-        <ol>
-          <li>بسته کامل افزونه را دوباره دانلود کنید.</li>
-          <li>پوشه فعلی افزونه را حذف و نسخه کامل را در <code>wp-content/plugins/NetGuard/</code> کپی کنید.</li>
-          <li>افزونه را غیرفعال/فعال کنید.</li>
-        </ol>
+        <md-elevated-card>
+          <div class="doc__error__body">
+            <h3 class="md-typescale-title-large">
+              <md-icon class="doc__error-icon" aria-hidden="true" data-no-i18n>error</md-icon>پکیج افزونه ناقص است (<code>vendor/</code> وجود ندارد)</h3>
+            <span class="doc__label"><md-icon class="doc__label-icon" aria-hidden="true" data-no-i18n>manage_search</md-icon>علت</span>
+            <p>پوشه <code>vendor/</code> در بسته بارگذاری‌شده وجود ندارد.</p>
+            <span class="doc__label"><md-icon class="doc__label-icon" aria-hidden="true" data-no-i18n>build</md-icon>راه‌حل</span>
+            <ol>
+              <li>بسته کامل افزونه را دوباره دانلود کنید.</li>
+              <li>پوشه فعلی افزونه را حذف و نسخه کامل را در <code>wp-content/plugins/NetGuard/</code> کپی کنید.</li>
+              <li>افزونه را غیرفعال/فعال کنید.</li>
+            </ol>
+          </div>
+        </md-elevated-card>
       </div>
 
       <div class="doc__error" id="dashboard-assets">
-        <h3>فایل‌های داشبورد موجود نیستند</h3>
-        <span class="doc__label">علت</span>
-        <p>فایل‌های آماده داشبورد داخل پوشه افزونه پیدا نشده‌اند.</p>
-        <span class="doc__label">راه‌حل</span>
-        <ol>
-          <li>پکیج کامل انتشار را جایگزین کنید.</li>
-          <li>از وجود فایل‌های <code>dashboard/dist/index.js</code>، <code>dashboard/dist/style.css</code> و <code>dashboard/dist/index.asset.php</code> مطمئن شوید.</li>
-        </ol>
+        <md-elevated-card>
+          <div class="doc__error__body">
+            <h3 class="md-typescale-title-large">
+              <md-icon class="doc__error-icon" aria-hidden="true" data-no-i18n>error</md-icon>فایل‌های داشبورد موجود نیستند</h3>
+            <span class="doc__label"><md-icon class="doc__label-icon" aria-hidden="true" data-no-i18n>manage_search</md-icon>علت</span>
+            <p>فایل‌های آماده داشبورد داخل پوشه افزونه پیدا نشده‌اند.</p>
+            <span class="doc__label"><md-icon class="doc__label-icon" aria-hidden="true" data-no-i18n>build</md-icon>راه‌حل</span>
+            <ol>
+              <li>پکیج کامل انتشار را جایگزین کنید.</li>
+              <li>از وجود فایل‌های <code>dashboard/dist/index.js</code>، <code>dashboard/dist/style.css</code> و <code>dashboard/dist/index.asset.php</code> مطمئن شوید.</li>
+            </ol>
+          </div>
+        </md-elevated-card>
       </div>
 
       <div class="doc__error" id="database-tables">
-        <h3>جداول دیتابیس ساخته نشده‌اند</h3>
-        <span class="doc__label">علت</span>
-        <p>نت‌گارد هنگام فعال‌سازی نتوانسته جداول موردنیاز را ایجاد کند.</p>
-        <span class="doc__label">راه‌حل</span>
-        <ol>
-          <li>افزونه را یک‌بار غیرفعال و دوباره فعال کنید.</li>
-          <li>مجوزهای دیتابیس برای <code>CREATE</code> و <code>ALTER</code> را بررسی کنید.</li>
-          <li>در صورت نیاز، <code>WP_DEBUG</code> را فعال و لاگ <code>wp-content/debug.log</code> را بررسی کنید.</li>
-        </ol>
+        <md-elevated-card>
+          <div class="doc__error__body">
+            <h3 class="md-typescale-title-large">
+              <md-icon class="doc__error-icon" aria-hidden="true" data-no-i18n>error</md-icon>جداول دیتابیس ساخته نشده‌اند</h3>
+            <span class="doc__label"><md-icon class="doc__label-icon" aria-hidden="true" data-no-i18n>manage_search</md-icon>علت</span>
+            <p>نت‌گارد هنگام فعال‌سازی نتوانسته جداول موردنیاز را ایجاد کند.</p>
+            <span class="doc__label"><md-icon class="doc__label-icon" aria-hidden="true" data-no-i18n>build</md-icon>راه‌حل</span>
+            <ol>
+              <li>افزونه را یک‌بار غیرفعال و دوباره فعال کنید.</li>
+              <li>مجوزهای دیتابیس برای <code>CREATE</code> و <code>ALTER</code> را بررسی کنید.</li>
+              <li>در صورت نیاز، <code>WP_DEBUG</code> را فعال و لاگ <code>wp-content/debug.log</code> را بررسی کنید.</li>
+            </ol>
+          </div>
+        </md-elevated-card>
       </div>
 
       <div class="doc__error" id="ioncube">
-        <h3>نیاز به ionCube Loader</h3>
-        <span class="doc__label">علت</span>
-        <p>این نسخه نت‌گارد به افزونه PHP با نام ionCube Loader نیاز دارد.</p>
-        <span class="doc__label">راه‌حل</span>
-        <ol>
-          <li>ionCube Loader را مطابق نسخه PHP نصب کنید.</li>
-          <li>وب‌سرور/PHP را ری‌استارت کنید.</li>
-        </ol>
+        <md-elevated-card>
+          <div class="doc__error__body">
+            <h3 class="md-typescale-title-large">
+              <md-icon class="doc__error-icon" aria-hidden="true" data-no-i18n>error</md-icon>نیاز به ionCube Loader</h3>
+            <span class="doc__label"><md-icon class="doc__label-icon" aria-hidden="true" data-no-i18n>manage_search</md-icon>علت</span>
+            <p>این نسخه نت‌گارد به افزونه PHP با نام ionCube Loader نیاز دارد.</p>
+            <span class="doc__label"><md-icon class="doc__label-icon" aria-hidden="true" data-no-i18n>build</md-icon>راه‌حل</span>
+            <ol>
+              <li>ionCube Loader را مطابق نسخه PHP نصب کنید.</li>
+              <li>وب‌سرور/PHP را ری‌استارت کنید.</li>
+            </ol>
+          </div>
+        </md-elevated-card>
       </div>
 
-      <h2 id="integrity-errors">خطاهای یکپارچگی فایل</h2>
+      <h2 id="integrity-errors" class="md-typescale-headline-small">خطاهای یکپارچگی فایل</h2>
       <p>نت‌گارد فایل‌های افزونه را با <code>integrity-manifest.json</code> و خط مبنای قابل اعتماد مقایسه می‌کند.</p>
 
       <div class="doc__error" id="manifest-missing">
-        <h3>مانیفست یکپارچگی پیدا نشد</h3>
-        <span class="doc__label">علت</span>
-        <p>فایل <code>integrity-manifest.json</code> در پوشه افزونه وجود ندارد.</p>
-        <span class="doc__label">راه‌حل</span>
-        <ol>
-          <li>نسخه کامل افزونه را جایگزین کنید.</li>
-          <li>افزونه را دوباره فعال کنید.</li>
-        </ol>
+        <md-elevated-card>
+          <div class="doc__error__body">
+            <h3 class="md-typescale-title-large">
+              <md-icon class="doc__error-icon" aria-hidden="true" data-no-i18n>error</md-icon>مانیفست یکپارچگی پیدا نشد</h3>
+            <span class="doc__label"><md-icon class="doc__label-icon" aria-hidden="true" data-no-i18n>manage_search</md-icon>علت</span>
+            <p>فایل <code>integrity-manifest.json</code> در پوشه افزونه وجود ندارد.</p>
+            <span class="doc__label"><md-icon class="doc__label-icon" aria-hidden="true" data-no-i18n>build</md-icon>راه‌حل</span>
+            <ol>
+              <li>نسخه کامل افزونه را جایگزین کنید.</li>
+              <li>افزونه را دوباره فعال کنید.</li>
+            </ol>
+          </div>
+        </md-elevated-card>
       </div>
 
       <div class="doc__error" id="files-changed">
-        <h3>فایل‌های افزونه تغییر کرده‌اند</h3>
-        <span class="doc__label">علت</span>
-        <p>برخی فایل‌ها با مانیفست انتشار یا خط مبنای معتبر همخوانی ندارند.</p>
-        <span class="doc__label">راه‌حل</span>
-        <ol>
-          <li>فایل‌های هسته افزونه را ویرایش نکنید.</li>
-          <li>کل پوشه افزونه را با نسخه اصلی جایگزین کنید.</li>
-          <li>افزونه را غیرفعال/فعال کنید تا خط مبنا دوباره ساخته شود.</li>
-        </ol>
+        <md-elevated-card>
+          <div class="doc__error__body">
+            <h3 class="md-typescale-title-large">
+              <md-icon class="doc__error-icon" aria-hidden="true" data-no-i18n>error</md-icon>فایل‌های افزونه تغییر کرده‌اند</h3>
+            <span class="doc__label"><md-icon class="doc__label-icon" aria-hidden="true" data-no-i18n>manage_search</md-icon>علت</span>
+            <p>برخی فایل‌ها با مانیفست انتشار یا خط مبنای معتبر همخوانی ندارند.</p>
+            <span class="doc__label"><md-icon class="doc__label-icon" aria-hidden="true" data-no-i18n>build</md-icon>راه‌حل</span>
+            <ol>
+              <li>فایل‌های هسته افزونه را ویرایش نکنید.</li>
+              <li>کل پوشه افزونه را با نسخه اصلی جایگزین کنید.</li>
+              <li>افزونه را غیرفعال/فعال کنید تا خط مبنا دوباره ساخته شود.</li>
+            </ol>
+          </div>
+        </md-elevated-card>
       </div>
 
       <div class="doc__error" id="scan-storage">
-        <h3><span class="doc__severity doc__severity--warning">هشدار</span> مسیر ذخیره‌سازی اسکن قابل نوشتن نیست</h3>
-        <span class="doc__label">علت</span>
-        <p>نت‌گارد امکان نوشتن در مسیر ذخیره‌سازی اسکن (معمولاً <code>wp-content/uploads</code>) را ندارد.</p>
-        <span class="doc__label">راه‌حل</span>
-        <ol>
-          <li>مجوز نوشتن مسیر <code>uploads</code> را اصلاح کنید.</li>
-          <li>پس از اصلاح دسترسی، یک اسکن جدید اجرا کنید.</li>
-        </ol>
+        <md-elevated-card>
+          <div class="doc__error__body">
+            <h3 class="md-typescale-title-large">
+              <md-icon class="doc__error-icon" aria-hidden="true" data-no-i18n>error</md-icon><span class="doc__severity doc__severity--warning">هشدار</span> مسیر ذخیره‌سازی اسکن قابل نوشتن نیست</h3>
+            <span class="doc__label"><md-icon class="doc__label-icon" aria-hidden="true" data-no-i18n>manage_search</md-icon>علت</span>
+            <p>نت‌گارد امکان نوشتن در مسیر ذخیره‌سازی اسکن (معمولاً <code>wp-content/uploads</code>) را ندارد.</p>
+            <span class="doc__label"><md-icon class="doc__label-icon" aria-hidden="true" data-no-i18n>build</md-icon>راه‌حل</span>
+            <ol>
+              <li>مجوز نوشتن مسیر <code>uploads</code> را اصلاح کنید.</li>
+              <li>پس از اصلاح دسترسی، یک اسکن جدید اجرا کنید.</li>
+            </ol>
+          </div>
+        </md-elevated-card>
       </div>
 
-      <h2 id="dashboard-errors">خطاهای داشبورد و رابط API</h2>
+      <h2 id="dashboard-errors" class="md-typescale-headline-small">خطاهای داشبورد و رابط API</h2>
       <p>اگر صفحه باز می‌شود ولی پیام «مشکلی رخ داد» می‌بینید، معمولاً درخواست API ناموفق بوده است.</p>
 
       <div class="doc__error" id="session-error">
-        <h3>خطای نشست یا دسترسی (401/403)</h3>
-        <span class="doc__label">راه‌حل</span>
-        <ol>
-          <li>صفحه را رفرش کنید.</li>
-          <li>از حساب خارج و دوباره وارد شوید.</li>
-          <li>سطح دسترسی مدیر را بررسی کنید.</li>
-        </ol>
+        <md-elevated-card>
+          <div class="doc__error__body">
+            <h3 class="md-typescale-title-large">
+              <md-icon class="doc__error-icon" aria-hidden="true" data-no-i18n>error</md-icon>خطای نشست یا دسترسی (401/403)</h3>
+            <span class="doc__label"><md-icon class="doc__label-icon" aria-hidden="true" data-no-i18n>build</md-icon>راه‌حل</span>
+            <ol>
+              <li>صفحه را رفرش کنید.</li>
+              <li>از حساب خارج و دوباره وارد شوید.</li>
+              <li>سطح دسترسی مدیر را بررسی کنید.</li>
+            </ol>
+          </div>
+        </md-elevated-card>
       </div>
 
       <div class="doc__error" id="route-not-found">
-        <h3>مسیر REST پیدا نشد (404)</h3>
-        <span class="doc__label">راه‌حل</span>
-        <ol>
-          <li>به تنظیمات پیوند یکتا بروید و یک‌بار ذخیره کنید.</li>
-          <li>افزونه را دوباره فعال کرده و صفحه را رفرش کنید.</li>
-        </ol>
+        <md-elevated-card>
+          <div class="doc__error__body">
+            <h3 class="md-typescale-title-large">
+              <md-icon class="doc__error-icon" aria-hidden="true" data-no-i18n>error</md-icon>مسیر REST پیدا نشد (404)</h3>
+            <span class="doc__label"><md-icon class="doc__label-icon" aria-hidden="true" data-no-i18n>build</md-icon>راه‌حل</span>
+            <ol>
+              <li>به تنظیمات پیوند یکتا بروید و یک‌بار ذخیره کنید.</li>
+              <li>افزونه را دوباره فعال کرده و صفحه را رفرش کنید.</li>
+            </ol>
+          </div>
+        </md-elevated-card>
       </div>
 
       <div class="doc__error" id="server-error">
-        <h3>خطای سرور (500)</h3>
-        <span class="doc__label">راه‌حل</span>
-        <ol>
-          <li>لاگ <code>wp-content/debug.log</code> را بررسی کنید.</li>
-          <li>از نسخه صحیح PHP و وجود پوشه <code>vendor/</code> مطمئن شوید.</li>
-        </ol>
+        <md-elevated-card>
+          <div class="doc__error__body">
+            <h3 class="md-typescale-title-large">
+              <md-icon class="doc__error-icon" aria-hidden="true" data-no-i18n>error</md-icon>خطای سرور (500)</h3>
+            <span class="doc__label"><md-icon class="doc__label-icon" aria-hidden="true" data-no-i18n>build</md-icon>راه‌حل</span>
+            <ol>
+              <li>لاگ <code>wp-content/debug.log</code> را بررسی کنید.</li>
+              <li>از نسخه صحیح PHP و وجود پوشه <code>vendor/</code> مطمئن شوید.</li>
+            </ol>
+          </div>
+        </md-elevated-card>
       </div>
 
       <div class="doc__error" id="blocked-api">
-        <h3>پاسخ API مسدود یا نامعتبر</h3>
-        <span class="doc__label">راه‌حل</span>
-        <ol>
-          <li>افزونه‌های امنیتی دیگر را موقتاً غیرفعال کنید.</li>
-          <li>اجازه دسترسی مسیر <code>/wp-json/</code> برای مدیر سایت را بررسی کنید.</li>
-        </ol>
+        <md-elevated-card>
+          <div class="doc__error__body">
+            <h3 class="md-typescale-title-large">
+              <md-icon class="doc__error-icon" aria-hidden="true" data-no-i18n>error</md-icon>پاسخ API مسدود یا نامعتبر</h3>
+            <span class="doc__label"><md-icon class="doc__label-icon" aria-hidden="true" data-no-i18n>build</md-icon>راه‌حل</span>
+            <ol>
+              <li>افزونه‌های امنیتی دیگر را موقتاً غیرفعال کنید.</li>
+              <li>اجازه دسترسی مسیر <code>/wp-json/</code> برای مدیر سایت را بررسی کنید.</li>
+            </ol>
+          </div>
+        </md-elevated-card>
       </div>
 
       <div class="doc__error" id="network-error">
-        <h3>خطای شبکه یا اتصال</h3>
-        <span class="doc__label">راه‌حل</span>
-        <ol>
-          <li>اتصال اینترنت را بررسی کرده و دوباره تلاش کنید.</li>
-          <li>باز بودن سایت وردپرس و دسترسی API را بررسی کنید.</li>
-        </ol>
+        <md-elevated-card>
+          <div class="doc__error__body">
+            <h3 class="md-typescale-title-large">
+              <md-icon class="doc__error-icon" aria-hidden="true" data-no-i18n>error</md-icon>خطای شبکه یا اتصال</h3>
+            <span class="doc__label"><md-icon class="doc__label-icon" aria-hidden="true" data-no-i18n>build</md-icon>راه‌حل</span>
+            <ol>
+              <li>اتصال اینترنت را بررسی کرده و دوباره تلاش کنید.</li>
+              <li>باز بودن سایت وردپرس و دسترسی API را بررسی کنید.</li>
+            </ol>
+          </div>
+        </md-elevated-card>
       </div>
 
-      <h2 id="general-tips">نکات عمومی</h2>
-      <ul>
-        <li>همیشه از سایت نسخه پشتیبان داشته باشید.</li>
-        <li>پس از هر تغییر مهم، کش مرورگر و کش سایت را پاک کنید.</li>
-        <li>برای مراحل اولیه نصب، <a href="installation-guide.html" style="color: var(--geist-link-color);">راهنمای نصب</a> را ببینید.</li>
-      </ul>
+      <h2 id="general-tips" class="md-typescale-headline-small">
+        <md-icon class="doc__heading-icon" aria-hidden="true" data-no-i18n>tips_and_updates</md-icon>
+        نکات عمومی
+      </h2>
+      <md-outlined-card class="doc__panel">
+        <md-list class="doc__list">
+          <md-list-item>
+            <md-icon slot="start" aria-hidden="true" data-no-i18n>verified_user</md-icon>
+            <div slot="headline">همیشه از سایت نسخه پشتیبان داشته باشید.</div>
+          </md-list-item>
+          <md-list-item>
+            <md-icon slot="start" aria-hidden="true" data-no-i18n>cached</md-icon>
+            <div slot="headline">پس از هر تغییر مهم، کش مرورگر و کش سایت را پاک کنید.</div>
+          </md-list-item>
+          <md-list-item>
+            <md-icon slot="start" aria-hidden="true" data-no-i18n>menu_book</md-icon>
+            <div slot="headline">برای مراحل اولیه نصب، <a href="installation-guide.html" style="color: var(--md-sys-color-primary);">راهنمای نصب</a> را ببینید.</div>
+          </md-list-item>
+        </md-list>
+      </md-outlined-card>
+
+      <div class="doc__cta">
+        <a class="btn-anchor" href="installation-guide.html">
+          <md-filled-tonal-button>راهنمای نصب</md-filled-tonal-button>
+        </a>
+      </div>
     </article>
   </main>
 

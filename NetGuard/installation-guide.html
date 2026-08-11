@@ -7,62 +7,106 @@
   <meta name="description" content="نت‌گارد را با کپی فایل افزونه و فعال‌سازی از پنل مدیریت وردپرس نصب کنید.">
   <link rel="icon" href="assets/icon.png" type="image/png" sizes="512x512">
   <link rel="apple-touch-icon" href="assets/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hemedani/yekan@v3.0.0/font-face.css">
   <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/material-web.bundle.js"></script>
 </head>
 <body>
-  <header class="header">
-    <nav class="nav">
-      <a href="index.html" class="nav__logo" aria-label="رفتن به صفحه اصلی">
-        <img src="assets/icon.png" alt="" width="44" height="44" class="site-icon">
-        <span>نت‌گارد</span>
+  <header class="app-bar">
+    <div class="app-bar__inner">
+      <a href="index.html" class="app-bar__brand" aria-label="رفتن به صفحه اصلی">
+        <img src="assets/icon.png" alt="" width="40" height="40" class="site-icon">
+        <span class="app-bar__brand-text">نت‌گارد</span>
       </a>
-      <div class="nav__links">
+      <nav class="app-bar__nav" aria-label="ناوبری اصلی">
         <a href="index.html#features">مستندات</a>
-        <a href="installation-guide.html">نصب</a>
+        <a href="installation-guide.html" class="is-active">نصب</a>
         <a href="troubleshooting.html">عیب‌یابی</a>
-      </div>
-      <div class="nav__actions">
-        <a href="https://rastchin.com" class="btn btn--outline btn--sm" target="_blank" rel="noopener">خرید</a>
+      </nav>
+      <div class="app-bar__actions">
+        <a class="btn-anchor" href="https://rastchin.com" target="_blank" rel="noopener">
+          <md-filled-tonal-button>خرید</md-filled-tonal-button>
+        </a>
         <button class="lang-toggle" type="button" data-lang-toggle data-no-i18n aria-label="Switch language">EN</button>
-        <button class="nav__menu" aria-label="باز کردن منو" type="button"><span class="material-symbols-outlined" aria-hidden="true">menu</span></button>
+        <md-icon-button toggle id="theme-toggle" aria-label="تغییر حالت ظاهر">
+          <md-icon>light_mode</md-icon>
+          <md-icon slot="selected">dark_mode</md-icon>
+        </md-icon-button>
+        <button class="app-bar__menu" aria-label="باز کردن منو" aria-expanded="false" type="button">
+          <md-icon aria-hidden="true">menu</md-icon>
+        </button>
       </div>
-    </nav>
+    </div>
   </header>
 
   <main class="doc">
     <aside class="doc__sidebar">
       <h4>راهنماها</h4>
-      <nav>
-        <a href="installation-guide.html" class="is-active">راهنمای نصب</a>
-        <a href="troubleshooting.html">عیب‌یابی</a>
-        <a href="index.html#features">مرور قابلیت‌ها</a>
-      </nav>
+      <md-list class="doc__nav-list">
+        <md-list-item type="link" href="installation-guide.html" class="is-active">
+          <div slot="headline">راهنمای نصب</div>
+        </md-list-item>
+        <md-list-item type="link" href="troubleshooting.html">
+          <div slot="headline">عیب‌یابی</div>
+        </md-list-item>
+        <md-list-item type="link" href="index.html#features">
+          <div slot="headline">مرور قابلیت‌ها</div>
+        </md-list-item>
+      </md-list>
     </aside>
 
     <article class="doc__content">
-      <h1>راهنمای نصب</h1>
-      <p class="doc__lead">نت‌گارد را مانند هر افزونه وردپرسی نصب کنید؛ فایل‌ها را کپی کنید، افزونه را فعال کنید و کار تمام است.</p>
+      <h1 class="md-typescale-headline-large">راهنمای نصب</h1>
+      <p class="doc__lead md-typescale-body-large">نت‌گارد را مانند هر افزونه وردپرسی نصب کنید؛ فایل‌ها را کپی کنید، افزونه را فعال کنید و کار تمام است.</p>
 
-      <h2 id="requirements">پیش‌نیازها</h2>
-      <ul>
-        <li><strong>وردپرس</strong> نسخه 6.4 یا بالاتر</li>
-        <li><strong>PHP</strong> نسخه 8.2 یا بالاتر</li>
-      </ul>
+      <h2 id="requirements" class="md-typescale-headline-small">
+        <md-icon class="doc__heading-icon" aria-hidden="true" data-no-i18n>checklist</md-icon>
+        پیش‌نیازها
+      </h2>
+      <md-outlined-card class="doc__panel">
+        <md-list class="doc__list">
+          <md-list-item>
+            <md-icon slot="start" aria-hidden="true" data-no-i18n>task_alt</md-icon>
+            <div slot="headline">وردپرس</div>
+            <div slot="supporting-text">نسخه 6.4 یا بالاتر</div>
+          </md-list-item>
+          <md-list-item>
+            <md-icon slot="start" aria-hidden="true" data-no-i18n>task_alt</md-icon>
+            <div slot="headline">PHP</div>
+            <div slot="supporting-text">نسخه 8.2 یا بالاتر</div>
+          </md-list-item>
+        </md-list>
+      </md-outlined-card>
 
-      <h2 id="install">مراحل نصب</h2>
-      <ol>
-        <li>فایل <code>netguard.zip</code> را از خرید راست‌چین دانلود کنید.</li>
-        <li>فایل ZIP را استخراج کنید تا پوشه <code>netguard</code> ایجاد شود.</li>
-        <li>پوشه <code>netguard</code> را در مسیر <code>wp-content/plugins/</code> روی سرور کپی کنید.</li>
-        <li>وارد وردپرس شوید و به بخش <strong>افزونه‌ها</strong> بروید.</li>
-        <li><strong>NetGuard</strong> را پیدا کنید و روی <strong>فعال‌سازی</strong> کلیک کنید.</li>
-      </ol>
+      <h2 id="install" class="md-typescale-headline-small">
+        <md-icon class="doc__heading-icon" aria-hidden="true" data-no-i18n>install_desktop</md-icon>
+        مراحل نصب
+      </h2>
+      <md-outlined-card class="doc__panel">
+        <ol class="doc__steps">
+          <li>فایل <code>netguard.zip</code> را از خرید راست‌چین دانلود کنید.</li>
+          <li>فایل ZIP را استخراج کنید تا پوشه <code>netguard</code> ایجاد شود.</li>
+          <li>پوشه <code>netguard</code> را در مسیر <code>wp-content/plugins/</code> روی سرور کپی کنید.</li>
+          <li>وارد وردپرس شوید و به بخش <strong>افزونه‌ها</strong> بروید.</li>
+          <li><strong>NetGuard</strong> را پیدا کنید و روی <strong>فعال‌سازی</strong> کلیک کنید.</li>
+        </ol>
+      </md-outlined-card>
 
       <p>در صورت تمایل، به‌جای کپی دستی فایل‌ها، ZIP را از مسیر <strong>افزونه‌ها ← افزودن ← بارگذاری افزونه</strong> آپلود کنید.</p>
 
       <p>پس از فعال‌سازی، از منوی کناری وردپرس وارد <strong>NetGuard</strong> شوید تا داشبورد باز شود.</p>
 
-      <p>اگر مشکلی داشتید، <a href="troubleshooting.html" style="color: var(--geist-link-color);">راهنمای عیب‌یابی</a> را ببینید.</p>
+      <div class="doc__cta">
+        <a class="btn-anchor" href="troubleshooting.html">
+          <md-outlined-button>راهنمای عیب‌یابی</md-outlined-button>
+        </a>
+        <a class="btn-anchor" href="https://rastchin.com" target="_blank" rel="noopener">
+          <md-filled-button>خرید از راست‌چین</md-filled-button>
+        </a>
+      </div>
     </article>
   </main>
 

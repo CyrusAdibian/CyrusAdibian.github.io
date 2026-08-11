@@ -22,46 +22,103 @@
     setInterval(animateLights, 400);
   }
 
-  // Streaming tabs
-  const tabs = document.querySelectorAll('.streaming__tab');
-  const preview = document.getElementById('streaming-preview');
-  const cards = document.querySelectorAll('.streaming-card');
+  // Theme (dark default, light optional, persisted)
+  const THEME_KEY = 'netguard-theme';
+  const themeToggle = document.getElementById('theme-toggle');
 
-  tabs.forEach((tab) => {
-    tab.addEventListener('click', () => {
-      tabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-      if (preview) {
-        const size = tab.dataset.tab;
-        preview.dataset.size = size === 'original' ? '' : size;
-      }
-    });
-  });
+  function getTheme() {
+    const stored = window.localStorage.getItem(THEME_KEY);
+    return stored === 'light' ? 'light' : 'dark';
+  }
 
-  // Auto-rotate streaming cards
-  let cardIndex = 0;
-  setInterval(() => {
-    if (cards.length === 0) return;
-    cardIndex = (cardIndex + 1) % cards.length;
-    cards.forEach((c, i) => c.classList.toggle('active', i === cardIndex));
-  }, 5000);
+  function applyTheme(theme) {
+    const isDark = theme === 'dark';
+    document.documentElement.classList.toggle('dark-theme', isDark);
+    document.documentElement.classList.toggle('light-theme', !isDark);
+    if (themeToggle) themeToggle.selected = isDark;
+  }
+
+  function initTheme() {
+    applyTheme(getTheme());
+    if (themeToggle) {
+      themeToggle.addEventListener('click', () => {
+        const next = document.documentElement.classList.contains('dark-theme') ? 'light' : 'dark';
+        window.localStorage.setItem(THEME_KEY, next);
+        applyTheme(next);
+      });
+    }
+  }
 
   // Mobile menu
-  const menuBtn = document.querySelector('.nav__menu');
-  const navLinks = document.querySelector('.nav__links');
+  const menuBtn = document.querySelector('.app-bar__menu');
+  const navLinks = document.querySelector('.app-bar__nav');
   if (menuBtn && navLinks) {
     menuBtn.addEventListener('click', () => {
-      navLinks.classList.toggle('nav__links--open');
-      const open = navLinks.classList.contains('nav__links--open');
+      navLinks.classList.toggle('app-bar__nav--open');
+      const open = navLinks.classList.contains('app-bar__nav--open');
       menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
 
     document.addEventListener('click', (e) => {
-      if (!navLinks.classList.contains('nav__links--open')) return;
-      if (!e.target.closest('.nav')) {
-        navLinks.classList.remove('nav__links--open');
+      if (!navLinks.classList.contains('app-bar__nav--open')) return;
+      if (!e.target.closest('.app-bar')) {
+        navLinks.classList.remove('app-bar__nav--open');
         menuBtn.setAttribute('aria-expanded', 'false');
       }
     });
+  }
+
+  // Scrollspy for documentation sidebar (topics list)
+  const spySidebar = document.querySelector('.doc__sidebar');
+  const spyLinks = spySidebar
+    ? Array.from(spySidebar.querySelectorAll('md-list-item[href^="#"]'))
+    : [];
+  if (spyLinks.length) {
+    const sections = spyLinks
+      .map((link) => document.querySelector(link.getAttribute('href')))
+      .filter(Boolean);
+
+    function setActive(id) {
+      spyLinks.forEach((link) => {
+        link.classList.toggle('is-active', link.getAttribute('href') === '#' + id);
+      });
+    }
+
+    function computeActive() {
+      if (!sections.length) return;
+      const offset = 96;
+      let current = sections[0].id;
+      sections.forEach((section) => {
+        if (section.getBoundingClientRect().top - offset <= 0) current = section.id;
+      });
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
+        current = sections[sections.length - 1].id;
+      }
+      setActive(current);
+    }
+
+    let spyTicking = false;
+    function onSpyScroll() {
+      if (spyTicking) return;
+      spyTicking = true;
+      requestAnimationFrame(() => {
+        computeActive();
+        spyTicking = false;
+      });
+    }
+
+    window.addEventListener('scroll', onSpyScroll, { passive: true });
+    window.addEventListener('resize', onSpyScroll);
+    computeActive();
+  }
+
+  function init() {
+    initTheme();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
   }
 })();

@@ -206,6 +206,84 @@ const SKETCHES = {
     <line x1="168" y1="72" x2="158" y2="82" stroke="currentColor" stroke-width="0.75" opacity="0.35"/>
     <line x1="110" y1="130" x2="100" y2="140" stroke="currentColor" stroke-width="0.75" opacity="0.35"/>
   </svg>`,
+
+  threatintel: `<svg viewBox="0 0 268 212" fill="none" class="feature-sketch">
+    <circle cx="134" cy="106" r="64" stroke="currentColor" stroke-width="0.5" opacity="0.15"/>
+    <circle cx="134" cy="106" r="44" stroke="currentColor" stroke-width="0.5" opacity="0.2"/>
+    <circle cx="134" cy="106" r="24" stroke="currentColor" stroke-width="0.5" opacity="0.25"/>
+    <path d="M134 26 V62 M134 150 V186 M58 106 H94 M174 106 H210" stroke="currentColor" stroke-width="0.5" opacity="0.2"/>
+    <circle cx="134" cy="106" r="8" stroke="currentColor" stroke-width="0.75" opacity="0.4"/>
+    <circle cx="134" cy="106" r="3" fill="currentColor" opacity="0.5"/>
+    <line x1="134" y1="106" x2="176" y2="82" stroke="currentColor" stroke-width="0.5" opacity="0.35"/>
+    <circle cx="86" cy="62" r="6" stroke="currentColor" stroke-width="0.5" opacity="0.35"/>
+    <circle cx="196" cy="140" r="6" stroke="currentColor" stroke-width="0.5" opacity="0.35"/>
+    <circle cx="102" cy="160" r="6" stroke="currentColor" stroke-width="0.5" opacity="0.35"/>
+    <circle cx="182" cy="64" r="6" stroke="currentColor" stroke-width="0.5" opacity="0.35"/>
+    <line x1="86" y1="62" x2="128" y2="96" stroke="currentColor" stroke-width="0.4" opacity="0.2"/>
+    <line x1="196" y1="140" x2="146" y2="112" stroke="currentColor" stroke-width="0.4" opacity="0.2"/>
+    <line x1="102" y1="160" x2="126" y2="120" stroke="currentColor" stroke-width="0.4" opacity="0.2"/>
+    <line x1="182" y1="64" x2="140" y2="98" stroke="currentColor" stroke-width="0.4" opacity="0.2"/>
+  </svg>`,
+
+  learning: `<svg viewBox="0 0 268 212" fill="none" class="feature-sketch">
+    <path d="M134 34 L204 64 V122 C204 164 134 184 134 184 C134 184 64 164 64 122 V64 Z" stroke="currentColor" stroke-width="0.75" opacity="0.3"/>
+    <path d="M134 55 L183 78 V120 C183 152 134 168 134 168 C134 168 85 152 85 120 V78 Z" stroke="currentColor" stroke-width="0.5" opacity="0.2"/>
+    <circle cx="134" cy="106" r="14" stroke="currentColor" stroke-width="0.75" opacity="0.4"/>
+    <path d="M134 100 L138 108 L146 112 L138 116 L134 124 L130 116 L122 112 L130 108 Z" fill="currentColor" opacity="0.35"/>
+    <circle cx="100" cy="82" r="3" fill="currentColor" opacity="0.35"/>
+    <circle cx="168" cy="82" r="3" fill="currentColor" opacity="0.35"/>
+    <line x1="108" y1="86" x2="126" y2="98" stroke="currentColor" stroke-width="0.4" opacity="0.2"/>
+    <line x1="160" y1="86" x2="142" y2="98" stroke="currentColor" stroke-width="0.4" opacity="0.2"/>
+  </svg>`,
+
+  geo: `<svg viewBox="0 0 268 212" fill="none" class="feature-sketch">
+    <circle cx="126" cy="96" r="52" stroke="currentColor" stroke-width="0.75" opacity="0.3"/>
+    <ellipse cx="126" cy="96" rx="22" ry="52" stroke="currentColor" stroke-width="0.5" opacity="0.2"/>
+    <path d="M74 96 H178 M86 66 H166 M86 126 H166" stroke="currentColor" stroke-width="0.5" opacity="0.2"/>
+    <circle cx="126" cy="96" r="8" stroke="currentColor" stroke-width="0.75" opacity="0.4"/>
+    <circle cx="104" cy="82" r="4" fill="currentColor" opacity="0.4"/>
+    <circle cx="150" cy="112" r="4" fill="currentColor" opacity="0.4"/>
+    <path d="M198 128 L208 150 H188 Z" stroke="currentColor" stroke-width="0.75" opacity="0.4"/>
+    <circle cx="198" cy="124" r="6" stroke="currentColor" stroke-width="0.5" opacity="0.35"/>
+  </svg>`,
+
+  backup: `<svg viewBox="0 0 268 212" fill="none" class="feature-sketch">
+    <rect x="64" y="100" width="140" height="72" rx="8" stroke="currentColor" stroke-width="0.75" opacity="0.3"/>
+    <path d="M84 100 L96 56 H172 L184 100" stroke="currentColor" stroke-width="0.75" opacity="0.35"/>
+    <line x1="92" y1="130" x2="176" y2="130" stroke="currentColor" stroke-width="0.5" opacity="0.2"/>
+    <line x1="92" y1="148" x2="160" y2="148" stroke="currentColor" stroke-width="0.5" opacity="0.2"/>
+    <path d="M134 128 V48 M134 48 L120 62 M134 48 L148 62" stroke="currentColor" stroke-width="0.75" opacity="0.45" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="134" cy="44" r="4" fill="currentColor" opacity="0.4"/>
+  </svg>`,
+
+  quarantine: `<svg viewBox="0 0 268 212" fill="none" class="feature-sketch">
+    <rect x="66" y="52" width="136" height="120" rx="8" stroke="currentColor" stroke-width="0.75" opacity="0.3"/>
+    <line x1="66" y1="84" x2="202" y2="84" stroke="currentColor" stroke-width="0.5" opacity="0.2"/>
+    <line x1="66" y1="116" x2="202" y2="116" stroke="currentColor" stroke-width="0.5" opacity="0.2"/>
+    <line x1="66" y1="148" x2="202" y2="148" stroke="currentColor" stroke-width="0.5" opacity="0.2"/>
+    <circle cx="134" cy="106" r="12" stroke="currentColor" stroke-width="0.75" opacity="0.4"/>
+    <path d="M134 98 L134 106 M134 112 L134 113" stroke="currentColor" stroke-width="0.75" opacity="0.4" stroke-linecap="round"/>
+    <circle cx="152" cy="62" r="4" fill="currentColor" opacity="0.35"/>
+    <circle cx="96" cy="62" r="4" fill="currentColor" opacity="0.35"/>
+  </svg>`,
+
+  compliance: `<svg viewBox="0 0 268 212" fill="none" class="feature-sketch">
+    <path d="M134 34 L204 64 V122 C204 164 134 184 134 184 C134 184 64 164 64 122 V64 Z" stroke="currentColor" stroke-width="0.75" opacity="0.3"/>
+    <path d="M134 55 L183 78 V120 C183 152 134 168 134 168 C134 168 85 152 85 120 V78 Z" stroke="currentColor" stroke-width="0.5" opacity="0.2"/>
+    <path d="M114 116 L128 130 L154 100" stroke="currentColor" stroke-width="1.2" opacity="0.45" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M96 82 L106 72 L124 90 M96 102 L106 92 L124 110" stroke="currentColor" stroke-width="0.75" opacity="0.3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>`,
+
+  captcha: `<svg viewBox="0 0 268 212" fill="none" class="feature-sketch">
+    <rect x="54" y="70" width="160" height="52" rx="26" stroke="currentColor" stroke-width="0.75" opacity="0.35"/>
+    <rect x="72" y="88" width="30" height="30" rx="5" stroke="currentColor" stroke-width="0.75" opacity="0.4"/>
+    <path d="M80 103 L86 109 L94 99" stroke="currentColor" stroke-width="1" opacity="0.45" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="162" cy="96" r="14" stroke="currentColor" stroke-width="0.75" opacity="0.4"/>
+    <path d="M156 96 L160 100 L168 92" stroke="currentColor" stroke-width="1" opacity="0.45" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="42" cy="70" r="3" fill="currentColor" opacity="0.35"/>
+    <circle cx="226" cy="124" r="3" fill="currentColor" opacity="0.35"/>
+    <circle cx="224" cy="74" r="3" fill="currentColor" opacity="0.35"/>
+  </svg>`,
 };
 
 function injectSketches() {
