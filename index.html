@@ -1,31 +1,1525 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=NetGuard/">
-  <title>نت‌گارد</title>
-  <link href="https://cdn.jsdelivr.net/gh/hemedani/yekan@v3.0.0/font-face.css" rel="stylesheet" type="text/css">
-  <link rel="icon" href="NetGuard/assets/icon.png" type="image/png" sizes="512x512">
-  <link rel="apple-touch-icon" href="NetGuard/assets/icon.png">
-  <style>
-    body { font-family: 'Yekan', Tahoma, sans-serif; }
-    html[dir="rtl"] [lang="en"],
-    html[dir="ltr"] [lang="fa"] { display: none; }
-  </style>
-  <script>
-    (function () {
-      var lang = localStorage.getItem('netguard-language') === 'en' ? 'en' : 'fa';
-      document.documentElement.lang = lang;
-      document.documentElement.dir = lang === 'en' ? 'ltr' : 'rtl';
-      document.title = lang === 'en' ? 'NetGuard' : 'نت‌گارد';
-      location.replace('NetGuard/');
-    })();
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyrus Adibian — Software Engineer | Security-First Developer</title>
+  <meta name="description" content="Cyrus Adibian is a software engineer specializing in security-first development: web applications, a security-first programming language, and macOS AI tools. Available for new projects.">
+  <meta name="keywords" content="Cyrus Adibian, software engineer, security-first developer, cybersecurity, compiler design, macOS developer, SwiftUI, React, WordPress security, programming language">
+  <meta name="author" content="Cyrus Adibian">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#2563eb">
+  <link rel="canonical" href="https://cyrusadibian.github.io/">
+  <link rel="icon" href="assets/portfolio-logo.png" type="image/png" sizes="512x512">
+  <link rel="apple-touch-icon" href="assets/portfolio-logo.png" sizes="512x512">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&family=Space+Mono:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Cyrus Adibian">
+  <meta property="og:title" content="Cyrus Adibian — Software Engineer | Security-First Developer">
+  <meta property="og:description" content="Software engineer building secure, well-crafted products: web applications, a security-first programming language, and macOS AI tools.">
+  <meta property="og:url" content="https://cyrusadibian.github.io/">
+  <meta property="og:image" content="https://cyrusadibian.github.io/assets/portfolio-logo.png">
+  <meta property="og:image:width" content="500">
+  <meta property="og:image:height" content="500">
+  <meta property="og:image:alt" content="Cyrus Adibian logo">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Cyrus Adibian — Software Engineer | Security-First Developer">
+  <meta name="twitter:description" content="Software engineer building secure, well-crafted products: web applications, a security-first programming language, and macOS AI tools.">
+  <meta name="twitter:image" content="https://cyrusadibian.github.io/assets/portfolio-logo.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Cyrus Adibian",
+    "url": "https://cyrusadibian.github.io/",
+    "email": "mailto:cyrusadibian@gmail.com",
+    "jobTitle": "Software Engineer",
+    "sameAs": [
+      "https://github.com/CyrusAdibian",
+      "https://github.com/CyrusAdibian/C-Hyphen",
+      "https://github.com/CyrusAdibian/Lenin"
+    ],
+    "knowsAbout": [
+      "Software Engineering",
+      "Cybersecurity",
+      "Compiler Design",
+      "macOS Development",
+      "SwiftUI",
+      "WordPress Security",
+      "AI and LLM Integration"
+    ]
+  }
   </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Cyrus Adibian",
+    "url": "https://cyrusadibian.github.io/"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Cyrus Adibian — Selected Work",
+    "itemListElement": [
+      {
+        "@type": "SoftwareApplication",
+        "position": 1,
+        "name": "NetGuard",
+        "url": "https://cyrusadibian.github.io/NetGuard/",
+        "applicationCategory": "SecurityApplication",
+        "operatingSystem": "WordPress",
+        "description": "A modular WordPress security platform with a React admin dashboard, WAF firewall, malware scanner, Zero Trust and SIEM modules."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "position": 2,
+        "name": "C-Hyphen",
+        "url": "https://github.com/CyrusAdibian/C-Hyphen",
+        "codeRepository": "https://github.com/CyrusAdibian/C-Hyphen",
+        "programmingLanguage": "C#",
+        "description": "A security-first, functional object-oriented programming language with a sandboxed runtime and encrypted modules."
+      },
+      {
+        "@type": "SoftwareApplication",
+        "position": 3,
+        "name": "Lenin",
+        "url": "https://github.com/CyrusAdibian/Lenin",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "macOS",
+        "description": "A native SwiftUI macOS AI assistant with local Ollama chat, embedded terminal, speech recognition and encryption."
+      }
+    ]
+  }
+  </script>
+  <style>
+    :root {
+      --bg: #faf9f7;
+      --surface: #ffffff;
+      --fg: #171614;
+      --muted: #757169;
+      --line: #e6e3dc;
+      --accent: #2563eb;
+      --accent-ink: #1d4ed8;
+      --mono: "Space Mono", ui-monospace, monospace;
+      --serif: "Instrument Serif", Georgia, serif;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #0f0e0c;
+        --surface: #16150f;
+        --fg: #f2f0ea;
+        --muted: #989389;
+        --line: #28261f;
+        --accent: #60a5fa;
+        --accent-ink: #93c5fd;
+      }
+    }
+
+    :root[data-theme="dark"] {
+      --bg: #0f0e0c;
+      --surface: #16150f;
+      --fg: #f2f0ea;
+      --muted: #989389;
+      --line: #28261f;
+      --accent: #60a5fa;
+      --accent-ink: #93c5fd;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    section[id] { scroll-margin-top: 92px; }
+
+    body {
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-weight: 400;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    ::selection { background: var(--accent); color: #fff; }
+
+    .serif { font-family: var(--serif); font-style: italic; font-weight: 400; }
+
+    .wrap { max-width: 980px; margin: 0 auto; padding: 0 28px; }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: color-mix(in srgb, var(--bg) 85%, transparent);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 76px;
+      font-size: 14px;
+    }
+
+    nav .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+
+    nav .brand img { width: 40px; height: 40px; border-radius: 10px; display: block; transition: transform 0.3s ease; }
+
+    nav .brand:hover img { transform: rotate(-6deg) scale(1.05); }
+
+    nav .brand span { font-weight: 600; letter-spacing: -0.01em; color: var(--fg); }
+
+    nav ul { display: flex; gap: 32px; list-style: none; }
+
+    nav a.link {
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+      transition: color 0.2s ease;
+    }
+
+    nav a.link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 0;
+      height: 2px;
+      border-radius: 2px;
+      background: var(--accent);
+      transition: width 0.25s ease;
+    }
+
+    nav a.link:hover, nav a.link.active { color: var(--fg); }
+
+    nav a.link:hover::after, nav a.link.active::after { width: 100%; }
+
+    nav .cta-group { display: flex; align-items: center; gap: 16px; }
+
+    .theme-toggle {
+      background: none;
+      border: none;
+      border-radius: 8px;
+      width: 36px;
+      height: 36px;
+      font-size: 20px;
+      color: var(--fg);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: color 0.2s ease, transform 0.2s ease;
+    }
+
+    .theme-toggle:hover { color: var(--accent); transform: rotate(12deg); }
+
+    .progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      width: 0;
+      background: var(--accent);
+      z-index: 60;
+      transition: width 0.1s linear;
+    }
+
+    .hero { padding: 110px 0 72px; border-bottom: 1px solid var(--line); position: relative; overflow: hidden; }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(color-mix(in srgb, var(--fg) 12%, transparent) 1px, transparent 1px);
+      background-size: 26px 26px;
+      opacity: 0.25;
+      mask-image: radial-gradient(ellipse 75% 65% at 50% 15%, #000 25%, transparent 75%);
+      -webkit-mask-image: radial-gradient(ellipse 75% 65% at 50% 15%, #000 25%, transparent 75%);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: -140px;
+      right: -120px;
+      width: 520px;
+      height: 520px;
+      background: radial-gradient(circle, color-mix(in srgb, var(--accent) 14%, transparent), transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: block;
+      max-width: 820px;
+      position: relative;
+    }
+
+    .hero .scroll-hint {
+      position: absolute;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      animation: bob 2.2s ease-in-out infinite;
+    }
+
+    @keyframes bob { 0%, 100% { transform: translate(-50%, 0); } 50% { transform: translate(-50%, 6px); } }
+
+    .hero .side-note {
+      position: absolute;
+      right: 32px;
+      top: 140px;
+      writing-mode: vertical-rl;
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .kicker {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 32px;
+    }
+
+    .kicker .dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--accent);
+      animation: pulse 2.2s ease-in-out infinite;
+    }
+
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+    .hero h1 {
+      font-size: clamp(48px, 8vw, 84px);
+      font-weight: 500;
+      letter-spacing: -0.04em;
+      line-height: 1.0;
+      margin-bottom: 32px;
+      max-width: 820px;
+    }
+
+    .hero h1 .serif { font-weight: 400; letter-spacing: -0.01em; }
+
+    .hero h1 .ink { color: var(--accent); }
+
+    .hero .lede {
+      font-size: 17px;
+      color: var(--muted);
+      max-width: 520px;
+      margin-bottom: 44px;
+    }
+
+    .hero .lede strong { color: var(--fg); font-weight: 600; }
+
+    .hero-actions { display: flex; gap: 36px; flex-wrap: wrap; }
+
+    .hero-actions a {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--fg);
+      text-decoration: none;
+      position: relative;
+      padding-bottom: 4px;
+    }
+
+    .hero-actions a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--accent);
+      transform: scaleX(0.35);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+
+    .hero-actions a:hover::after { transform: scaleX(1); }
+
+    .award {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 28px;
+    }
+
+    .award .material-symbols-outlined {
+      font-size: 20px;
+      color: var(--accent);
+      font-variation-settings: "FILL" 1;
+    }
+
+    .award strong { color: var(--fg); font-weight: 600; }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      margin-top: 92px;
+      border-top: 1px solid var(--line);
+    }
+
+    .stat { padding: 26px 20px 0 0; }
+
+    .stat .num {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 34px;
+      display: block;
+      margin-bottom: 4px;
+      color: var(--accent);
+      transition: transform 0.25s ease;
+    }
+
+    .stat:hover .num { transform: translateX(4px) scale(1.05); }
+
+    .stat .label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; }
+
+    .marquee {
+      border-bottom: 1px solid var(--line);
+      overflow: hidden;
+      background: var(--surface);
+      padding: 20px 0;
+    }
+
+    .marquee .track {
+      display: flex;
+      gap: 56px;
+      width: max-content;
+      animation: scroll 26s linear infinite;
+    }
+
+    .marquee:hover .track { animation-play-state: paused; }
+
+    @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    .marquee span {
+      display: flex;
+      align-items: center;
+      gap: 56px;
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 26px;
+      color: var(--fg);
+      opacity: 0.35;
+      white-space: nowrap;
+      transition: opacity 0.3s ease;
+    }
+
+    .marquee:hover span { opacity: 0.7; }
+
+    .marquee span::after {
+      content: "diamond";
+      font-family: "Material Symbols Outlined";
+      font-style: normal;
+      font-size: 14px;
+      color: var(--accent);
+      opacity: 1;
+    }
+
+    section.block { padding: 110px 0; border-bottom: 1px solid var(--line); }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: 96px 1fr;
+      gap: 24px;
+      align-items: baseline;
+      margin-bottom: 56px;
+      position: relative;
+    }
+
+    .section-head .ghost {
+      position: absolute;
+      top: -88px;
+      right: -8px;
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: clamp(120px, 16vw, 220px);
+      line-height: 1;
+      color: var(--accent);
+      opacity: 0.06;
+      pointer-events: none;
+      user-select: none;
+      z-index: -1;
+    }
+
+    .section-head .index { font-family: var(--mono); font-size: 12px; color: var(--accent); }
+
+    .section-head h2 {
+      font-size: clamp(32px, 4vw, 44px);
+      font-weight: 500;
+      letter-spacing: -0.03em;
+      line-height: 1.08;
+    }
+
+    .section-head h2 .serif { color: var(--accent); letter-spacing: 0; }
+
+    .section-head h2 small {
+      display: block;
+      font-size: 15px;
+      font-weight: 400;
+      color: var(--muted);
+      letter-spacing: 0;
+      margin-top: 10px;
+    }
+
+    .services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+
+    .service {
+      border-top: 1px solid var(--line);
+      padding-top: 22px;
+      transition: border-color 0.25s ease;
+    }
+
+    .service:hover { border-color: var(--accent); }
+
+    .service .s-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      margin-bottom: 12px;
+    }
+
+    .service .s-top h3 { font-size: 18px; font-weight: 600; }
+
+    .service .s-index {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 26px;
+      color: var(--accent);
+      line-height: 1;
+    }
+
+    .service p { font-size: 14px; color: var(--muted); margin-bottom: 16px; }
+
+    .service ul { list-style: none; }
+
+    .service li {
+      font-size: 13px;
+      color: var(--muted);
+      padding: 6px 0 6px 18px;
+      position: relative;
+      border-top: 1px dashed var(--line);
+    }
+
+    .service li:first-child { border-top: none; }
+
+    .service li::before {
+      content: "arrow_forward";
+      font-family: "Material Symbols Outlined";
+      font-size: 13px;
+      position: absolute;
+      left: 0;
+      top: 6px;
+      color: var(--accent);
+    }
+
+    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+
+    .project {
+      display: block;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-4px);
+      border-color: var(--fg);
+      box-shadow: 0 24px 48px -24px color-mix(in srgb, var(--fg) 18%, transparent);
+    }
+
+    .project figure {
+      position: relative;
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      background: var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .project figure.bg-tile { background-color: #eceae4; background-image: radial-gradient(#d6d2c8 1px, transparent 1px); background-size: 14px 14px; }
+
+    @media (prefers-color-scheme: dark) { .project figure.bg-tile { background-color: #1c1a14; background-image: radial-gradient(#33312a 1px, transparent 1px); } }
+
+    .project img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .project figure::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(10, 10, 10, 0.5), transparent 55%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .project:hover figure::after { opacity: 1; }
+
+    .project .figure-link {
+      position: absolute;
+      bottom: 16px;
+      left: 16px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--mono);
+      font-size: 12px;
+      color: #fff;
+      opacity: 0;
+      transform: translateY(6px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .project .figure-link .material-symbols-outlined { font-size: 16px; }
+
+    .project:hover .figure-link { opacity: 1; transform: none; }
+
+    .project figure.contain img { object-fit: contain; padding: 40px; }
+
+    .project:hover img { transform: scale(1.04); }
+
+    .project .proj-num {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      font-family: var(--mono);
+      font-size: 11px;
+      background: var(--bg);
+      color: var(--fg);
+      border: 1px solid var(--line);
+      padding: 5px 11px;
+      border-radius: 999px;
+    }
+
+    .project-body { padding: 26px; }
+
+    .project-body .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .project-body h3 { font-size: 21px; font-weight: 600; letter-spacing: -0.01em; }
+
+    .project-body .arrow { font-size: 18px; color: var(--accent); transition: transform 0.3s ease; }
+    .project:hover .arrow { transform: translateX(5px); }
+
+    .project-body .meta { font-family: var(--mono); font-size: 12px; color: var(--muted); margin-bottom: 12px; }
+
+    .project-body p { font-size: 14px; color: var(--muted); margin-bottom: 18px; }
+
+    .project .proj-foot {
+      margin-top: 22px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .grid-featured { margin-bottom: 32px; }
+
+    .project--featured { display: grid; grid-template-columns: 1.15fr 1fr; }
+
+    .project--featured figure {
+      aspect-ratio: auto;
+      min-height: 420px;
+      border-right: 1px solid var(--line);
+      border-bottom: none;
+    }
+
+    .project--featured figure.contain img { padding: 60px; }
+
+    .project--featured .project-body {
+      padding: 44px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project--featured .project-body .top { margin-bottom: 14px; }
+
+    .project--featured h3 { font-size: 32px; letter-spacing: -0.02em; }
+
+    .project--featured .meta { margin-bottom: 16px; }
+
+    .project--featured .big {
+      font-size: 16px;
+      color: var(--muted);
+      margin-bottom: 22px;
+    }
+
+    .project--featured .big strong { color: var(--fg); font-weight: 600; }
+
+    .project--featured .proj-foot { margin-top: auto; }
+
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+
+    .tag {
+      font-family: var(--mono);
+      font-size: 11px;
+      padding: 4px 10px;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      color: var(--muted);
+      transition: border-color 0.2s ease, color 0.2s ease;
+    }
+
+    .project:hover .tag { border-color: color-mix(in srgb, var(--accent) 40%, var(--line)); }
+
+    .timeline { position: relative; padding-left: 26px; }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 4px;
+      top: 6px;
+      bottom: 6px;
+      width: 2px;
+      background: var(--line);
+    }
+
+    .entry { position: relative; padding-bottom: 48px; }
+
+    .entry:last-child { padding-bottom: 0; }
+
+    .entry::before {
+      content: "";
+      position: absolute;
+      left: -26px;
+      top: 8px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--bg);
+      border: 3px solid var(--accent);
+    }
+
+    .entry .when {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--accent);
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    .entry h3 { font-size: 19px; font-weight: 600; margin-bottom: 2px; }
+
+    .entry .role { font-size: 14px; color: var(--muted); margin-bottom: 10px; }
+
+    .entry p { font-size: 14px; color: var(--muted); max-width: 660px; }
+
+    .stack { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px 56px; }
+
+    .stack-group { border-top: 1px solid var(--line); padding-top: 22px; }
+
+    .stack-group h4 {
+      font-family: var(--mono);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    .stack-group .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+
+    .chip {
+      font-size: 13px;
+      font-weight: 500;
+      padding: 7px 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--surface);
+      color: var(--fg);
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .chip:hover { border-color: var(--accent); transform: translateY(-1px); }
+
+    .contact { padding: 120px 0 140px; }
+
+    .contact .band {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 72px 56px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact .band::before {
+      content: "";
+      position: absolute;
+      bottom: -140px;
+      left: -80px;
+      width: 420px;
+      height: 420px;
+      background: radial-gradient(circle, color-mix(in srgb, var(--accent) 14%, transparent), transparent 70%);
+      pointer-events: none;
+    }
+
+    .contact h2 {
+      font-size: clamp(38px, 6vw, 64px);
+      font-weight: 500;
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+      margin-bottom: 24px;
+      max-width: 700px;
+      position: relative;
+    }
+
+    .contact h2 .serif { color: var(--accent); }
+
+    .contact p { font-size: 16px; color: var(--muted); max-width: 480px; margin-bottom: 44px; position: relative; }
+
+    .contact .direct-email {
+      font-size: 14px;
+      margin-top: 28px;
+      margin-bottom: 0;
+      font-family: var(--mono);
+    }
+
+    .contact .direct-email a {
+      color: var(--fg);
+      text-decoration: none;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 2px;
+      transition: border-color 0.2s ease;
+    }
+
+    .contact .direct-email a:hover { border-color: var(--accent); }
+
+    .contact .links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .contact .links .modal-trigger {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--mono);
+      font-size: 14px;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      cursor: pointer;
+      padding: 14px 26px;
+      border-radius: 10px;
+      background: rgba(12, 18, 32, 0.55);
+      -webkit-backdrop-filter: blur(14px);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      color: #fff;
+      transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+    }
+
+    .contact .links .modal-trigger .material-symbols-outlined { font-size: 17px; color: var(--accent); }
+
+    .contact .links .modal-trigger:hover { transform: translateY(-1px); background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.3); }
+
+    .modal {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      z-index: 100;
+      background: rgba(0, 0, 0, 0.55);
+      -webkit-backdrop-filter: blur(8px);
+      backdrop-filter: blur(8px);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .modal.open { opacity: 1; visibility: visible; }
+
+    .modal-card {
+      width: 100%;
+      max-width: 460px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 44px;
+      position: relative;
+      box-shadow: 0 40px 80px -40px rgba(0, 0, 0, 0.4);
+      transform: translateY(20px) scale(0.98);
+      transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .modal.open .modal-card { transform: none; }
+
+    .modal-close {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      border-radius: 50%;
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      transition: color 0.2s ease, transform 0.2s ease;
+    }
+
+    .modal-close:hover { color: var(--accent); transform: rotate(90deg); }
+
+    .modal-card h3 {
+      font-size: 30px;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      margin-bottom: 10px;
+    }
+
+    .modal-card h3 .serif { color: var(--accent); }
+
+    .modal-sub { font-size: 14px; color: var(--muted); margin-bottom: 28px; }
+
+    .field { margin-bottom: 20px; }
+
+    .field label {
+      display: block;
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .field input, .field textarea {
+      width: 100%;
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px 14px;
+      font-family: "Inter", sans-serif;
+      font-size: 15px;
+      color: var(--fg);
+      outline: none;
+      resize: vertical;
+      transition: border-color 0.2s ease;
+    }
+
+    .field input:focus, .field textarea:focus { border-color: var(--accent); }
+
+    .field input::placeholder, .field textarea::placeholder { color: color-mix(in srgb, var(--muted) 70%, transparent); }
+
+    .submit-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+      justify-content: center;
+      font-family: var(--mono);
+      font-size: 14px;
+      letter-spacing: 0.02em;
+      padding: 14px;
+      border-radius: 10px;
+      border: 1px solid var(--accent);
+      background: var(--accent);
+      color: #fff;
+      cursor: pointer;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .submit-btn:hover { transform: translateY(-1px); opacity: 0.9; }
+
+    .submit-btn .material-symbols-outlined { font-size: 17px; }
+
+    footer { padding: 64px 0 40px; }
+
+    footer .big {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: clamp(44px, 8vw, 88px);
+      letter-spacing: -0.02em;
+      color: var(--fg);
+      opacity: 0.12;
+      line-height: 1;
+      margin-bottom: 32px;
+      user-select: none;
+    }
+
+    footer .inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      padding-top: 32px;
+    }
+
+    footer .links { display: flex; gap: 28px; }
+
+    footer a { color: var(--muted); text-decoration: none; transition: color 0.2s ease; }
+
+    footer a:hover { color: var(--accent); }
+
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+
+    .reveal.visible { opacity: 1; transform: none; }
+
+    @media (max-width: 860px) {
+      .hero .side-note { display: none; }
+      .hero .scroll-hint { display: none; }
+      .hero-grid { gap: 40px; }
+      .services { grid-template-columns: 1fr; gap: 36px; }
+      .grid-2 { grid-template-columns: 1fr; }
+      .project--featured { grid-template-columns: 1fr; }
+      .project--featured figure {
+        min-height: 0;
+        aspect-ratio: 16 / 10;
+        border-right: none;
+        border-bottom: 1px solid var(--line);
+      }
+      .project--featured figure.contain img { padding: 40px; }
+      .project--featured .project-body { padding: 32px; }
+      .stack { grid-template-columns: 1fr; }
+      .section-head { grid-template-columns: 1fr; gap: 8px; }
+    }
+
+    @media (max-width: 560px) {
+      nav ul { display: none; }
+      .hero { padding: 92px 0 56px; }
+      .stats { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+      .stat { padding-right: 0; }
+      section.block { padding: 80px 0; }
+      .contact { padding: 88px 0 100px; }
+      .contact .band { padding: 48px 28px; }
+      .project figure.contain img { padding: 24px; }
+    }
+  </style>
 </head>
-<body>
-  <p>
-    <span lang="fa" dir="rtl">در حال انتقال به <a href="NetGuard/">نت‌گارد</a>…</span>
-    <span lang="en" dir="ltr">Redirecting to <a href="NetGuard/">NetGuard</a>...</span>
-  </p>
+<body id="top">
+  <div class="progress" id="progress" aria-hidden="true"></div>
+  <header>
+    <div class="wrap">
+      <nav>
+        <a class="brand" href="#top">
+          <img src="assets/portfolio-logo.png" alt="Cyrus Adibian logo" width="40" height="40">
+          <span>Cyrus Adibian</span>
+        </a>
+        <ul>
+          <li><a class="link" href="#work">Work</a></li>
+          <li><a class="link" href="#services">Services</a></li>
+          <li><a class="link" href="#experience">Experience</a></li>
+          <li><a class="link" href="#stack">Skills</a></li>
+        </ul>
+        <div class="cta-group">
+          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle color theme">
+            <span class="material-symbols-outlined" id="theme-icon" aria-hidden="true">dark_mode</span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <span class="side-note">Security × Software — est. 2024</span>
+      <div class="wrap">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <p class="kicker"><span class="dot"></span>Available for new projects</p>
+            <h1>Security-first software people can <span class="serif ink">trust.</span></h1>
+            <p class="lede">I'm <strong>Cyrus Adibian</strong>, an independent software engineer. I design and build secure, well-crafted products — web applications, a programming language, and macOS tools.</p>
+            <div class="hero-actions">
+              <a href="#work">View my work</a>
+              <a href="#contact">Get in touch</a>
+            </div>
+            <div class="award">
+              <span class="material-symbols-outlined" aria-hidden="true">emoji_events</span>
+              <span><strong>Top Employee of the Year 2025</strong> — recognized for outstanding contribution</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="stats">
+          <div class="stat"><span class="num">03</span><span class="label">Notable projects</span></div>
+          <div class="stat"><span class="num">05+</span><span class="label">Languages</span></div>
+          <div class="stat"><span class="num">02</span><span class="label">Compiler &amp; app</span></div>
+          <div class="stat"><span class="num">100%</span><span class="label">Security-first</span></div>
+        </div>
+      </div>
+      <span class="scroll-hint">Scroll</span>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="track">
+        <span>Swift</span><span>C#</span><span>Rust</span><span>PHP</span><span>React</span><span>SwiftUI</span><span>WAF</span><span>Sandboxing</span><span>Zero Trust</span><span>Ollama</span>
+        <span>Swift</span><span>C#</span><span>Rust</span><span>PHP</span><span>React</span><span>SwiftUI</span><span>WAF</span><span>Sandboxing</span><span>Zero Trust</span><span>Ollama</span>
+      </div>
+    </div>
+
+    <section class="block" id="services">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="ghost">01</span>
+          <span class="index">( 01 )</span>
+          <h2>What I can <span class="serif">build</span><small>Services focused on depth and craft</small></h2>
+        </div>
+        <div class="services">
+          <div class="service reveal">
+            <div class="s-top"><span class="s-index">01</span><h3>Web Applications</h3></div>
+            <p>End-to-end web products — frontend, backend, and deployment. Built to scale, built to last.</p>
+            <ul>
+              <li>React &amp; modern frontends</li>
+              <li>WordPress &amp; PHP platforms</li>
+              <li>Clean, maintainable code</li>
+            </ul>
+          </div>
+          <div class="service reveal">
+            <div class="s-top"><span class="s-index">02</span><h3>Security Engineering</h3></div>
+            <p>Security treated as architecture, not an afterthought — from the runtime up.</p>
+            <ul>
+              <li>WAF &amp; threat modeling</li>
+              <li>Sandboxing &amp; Zero Trust</li>
+              <li>Encryption &amp; audit tooling</li>
+            </ul>
+          </div>
+          <div class="service reveal">
+            <div class="s-top"><span class="s-index">03</span><h3>Native &amp; AI Tools</h3></div>
+            <p>Desktop applications and AI tooling with local-first, private-by-design models.</p>
+            <ul>
+              <li>SwiftUI macOS apps</li>
+              <li>Ollama &amp; local models</li>
+              <li>Language &amp; compiler work</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="work">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="ghost">02</span>
+          <span class="index">( 02 )</span>
+          <h2>Selected <span class="serif">work</span><small>A few things I've designed and shipped</small></h2>
+        </div>
+        <div class="grid-featured">
+
+          <a class="project project--featured reveal" href="https://cyrusadibian.github.io/NetGuard/">
+            <figure class="contain bg-tile">
+              <span class="figure-link">Visit NetGuard <span class="material-symbols-outlined" aria-hidden="true">arrow_outward</span></span>
+              <span class="proj-num"><span class="material-symbols-outlined" aria-hidden="true" style="font-size:12px; vertical-align:-1px;">star</span> Featured</span>
+              <img src="assets/netguard-icon.png" alt="NetGuard icon" loading="lazy" decoding="async">
+            </figure>
+            <div class="project-body">
+              <div class="top"><h3>NetGuard</h3><span class="arrow material-symbols-outlined" aria-hidden="true">arrow_outward</span></div>
+              <p class="meta">WordPress security suite · v1.0.1</p>
+              <p class="big"><strong>A modular security platform for WordPress</strong> — React admin dashboard, WAF firewall, malware scanner, Zero Trust and SIEM modules in one unified layer.</p>
+              <div class="tags">
+                <span class="tag">WordPress</span>
+                <span class="tag">React</span>
+                <span class="tag">WAF</span>
+                <span class="tag">Zero Trust</span>
+                <span class="tag">SIEM</span>
+              </div>
+              <div class="proj-foot">
+                <span>Security Platform</span>
+                <span>2026</span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+        <div class="grid-2">
+
+          <a class="project reveal" href="https://github.com/CyrusAdibian/C-Hyphen" target="_blank" rel="noopener">
+            <figure class="contain bg-tile">
+              <span class="figure-link">View source <span class="material-symbols-outlined" aria-hidden="true">arrow_outward</span></span>
+              <span class="proj-num">02</span>
+              <img src="assets/chyphen-logo.png" alt="C-Hyphen logo" loading="lazy" decoding="async">
+            </figure>
+            <div class="project-body">
+              <div class="top"><h3>C-Hyphen</h3><span class="arrow material-symbols-outlined" aria-hidden="true">arrow_outward</span></div>
+              <p class="meta">Security-first programming language</p>
+              <p>A functional, object-oriented language where security is a first-class concern — sandboxed runtime, encrypted modules, AI-powered tooling.</p>
+              <div class="tags">
+                <span class="tag">C#</span>
+                <span class="tag">Rust</span>
+                <span class="tag">Compiler</span>
+                <span class="tag">Sandbox</span>
+              </div>
+              <div class="proj-foot">
+                <span>Language / Compiler</span>
+                <span>2025</span>
+              </div>
+            </div>
+          </a>
+
+          <a class="project reveal" href="https://github.com/CyrusAdibian/Lenin" target="_blank" rel="noopener">
+            <figure class="contain bg-tile">
+              <span class="figure-link">View source <span class="material-symbols-outlined" aria-hidden="true">arrow_outward</span></span>
+              <span class="proj-num">03</span>
+              <img src="assets/lenin-icon.png" alt="Lenin app icon" loading="lazy" decoding="async">
+            </figure>
+            <div class="project-body">
+              <div class="top"><h3>Lenin</h3><span class="arrow material-symbols-outlined" aria-hidden="true">arrow_outward</span></div>
+              <p class="meta">macOS AI assistant</p>
+              <p>A native SwiftUI assistant — local Ollama chat, embedded terminal, speech recognition, encryption and plugin management.</p>
+              <div class="tags">
+                <span class="tag">Swift</span>
+                <span class="tag">SwiftUI</span>
+                <span class="tag">Ollama</span>
+                <span class="tag">Speech</span>
+              </div>
+              <div class="proj-foot">
+                <span>Desktop App</span>
+                <span>2024</span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="experience">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="ghost">03</span>
+          <span class="index">( 03 )</span>
+          <h2>My <span class="serif">journey</span><small>An independent path, focused on depth</small></h2>
+        </div>
+        <div class="timeline">
+          <div class="entry reveal">
+            <span class="when">2026 — Present</span>
+            <h3>NetGuard</h3>
+            <p class="role">Security platform · WordPress ecosystem</p>
+            <p>Designed and built a modular WordPress security suite — React admin dashboard, WAF, malware scanner, Zero Trust and SIEM modules — with full bilingual documentation.</p>
+          </div>
+          <div class="entry reveal">
+            <span class="when">2025 — Present</span>
+            <h3>C-Hyphen</h3>
+            <p class="role">Programming language · C# / Rust</p>
+            <p>Architected a security-first programming language: sandboxed execution environment, encrypted module relationships, strict dependency boundaries, and AI-powered developer tooling.</p>
+          </div>
+          <div class="entry reveal">
+            <span class="when">2024 — Present</span>
+            <h3>Lenin</h3>
+            <p class="role">macOS application · Swift / SwiftUI</p>
+            <p>Built a native AI assistant for macOS with local Ollama integration, an embedded terminal, speech recognition, encryption, plugin management and model switching.</p>
+          </div>
+          <div class="entry reveal">
+            <span class="when">Ongoing</span>
+            <h3>Independent Developer</h3>
+            <p class="role">Security · AI · Web</p>
+            <p>Continually exploring how to make software simpler, more private, and more trustworthy — across web, desktop, and systems programming.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="stack">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="ghost">04</span>
+          <span class="index">( 04 )</span>
+          <h2>Technical <span class="serif">skills</span><small>Multi-platform development, compilers, and cybersecurity</small></h2>
+        </div>
+        <div class="stack">
+          <div class="stack-group reveal">
+            <h4>Languages</h4>
+            <div class="chips">
+              <span class="chip">C</span>
+              <span class="chip">C++</span>
+              <span class="chip">C#</span>
+              <span class="chip">Java</span>
+              <span class="chip">Swift</span>
+              <span class="chip">Objective-C</span>
+              <span class="chip">Rust</span>
+              <span class="chip">Go</span>
+              <span class="chip">Python</span>
+              <span class="chip">JavaScript</span>
+              <span class="chip">Kotlin</span>
+              <span class="chip">Ruby</span>
+              <span class="chip">Dart</span>
+              <span class="chip">Visual Basic</span>
+              <span class="chip">Shell Script</span>
+              <span class="chip">Assembly (ARM)</span>
+              <span class="chip">Assembly (x86-8086)</span>
+            </div>
+          </div>
+          <div class="stack-group reveal">
+            <h4>Frameworks &amp; UI</h4>
+            <div class="chips">
+              <span class="chip">SwiftUI</span>
+              <span class="chip">WinUI 3</span>
+              <span class="chip">WinForms</span>
+              <span class="chip">ASP.NET</span>
+              <span class="chip">WebView</span>
+              <span class="chip">iOS SDK</span>
+              <span class="chip">macOS SDK</span>
+            </div>
+          </div>
+          <div class="stack-group reveal">
+            <h4>Systems &amp; DevOps</h4>
+            <div class="chips">
+              <span class="chip">Linux Kernel</span>
+              <span class="chip">Sandboxed VMs</span>
+              <span class="chip">Multithreading</span>
+              <span class="chip">CI/CD</span>
+              <span class="chip">Git</span>
+              <span class="chip">Compiler Design</span>
+              <span class="chip">Register Allocation</span>
+              <span class="chip">Cross-Platform Development</span>
+            </div>
+          </div>
+          <div class="stack-group reveal">
+            <h4>Security</h4>
+            <div class="chips">
+              <span class="chip">OWASP Top 10</span>
+              <span class="chip">CVE Analysis</span>
+              <span class="chip">Network Security</span>
+              <span class="chip">SIEM</span>
+              <span class="chip">NIST CSF</span>
+              <span class="chip">Risk Management</span>
+              <span class="chip">Threat Modeling</span>
+              <span class="chip">Ethical Hacking (CEH)</span>
+              <span class="chip">Security+</span>
+              <span class="chip">Zero-Trust Architecture</span>
+              <span class="chip">Encryption</span>
+            </div>
+          </div>
+          <div class="stack-group reveal">
+            <h4>AI &amp; Data</h4>
+            <div class="chips">
+              <span class="chip">OpenAI API</span>
+              <span class="chip">LLM Integration</span>
+              <span class="chip">AI-Assisted Debugging</span>
+              <span class="chip">SQL</span>
+              <span class="chip">PostgreSQL</span>
+              <span class="chip">JSON</span>
+              <span class="chip">YAML</span>
+              <span class="chip">XAML</span>
+            </div>
+          </div>
+          <div class="stack-group reveal">
+            <h4>Core Competencies</h4>
+            <div class="chips">
+              <span class="chip">Multi-platform (macOS, iOS, Windows, Linux)</span>
+              <span class="chip">Cryptography &amp; E2E Encryption</span>
+              <span class="chip">Attack Surface Reduction</span>
+              <span class="chip">Compiler &amp; Language Design</span>
+              <span class="chip">Low-Level Programming</span>
+              <span class="chip">Security Architecture</span>
+              <span class="chip">Sandboxed Execution &amp; VM Isolation</span>
+              <span class="chip">Agile &amp; Algorithm Design</span>
+              <span class="chip">AI/LLM API Integration</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap">
+        <div class="band">
+          <h2 class="reveal">Have a project in mind?<br><span class="serif">Let's talk.</span></h2>
+          <p class="reveal">My inbox is always open — whether it's a full product, a security review, or just an idea worth exploring.</p>
+          <div class="links reveal">
+            <button class="modal-trigger" type="button" data-modal-open><span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>Go ahead</button>
+          </div>
+          <p class="reveal direct-email">Or email me directly at <a href="mailto:cyrusadibian@gmail.com">cyrusadibian@gmail.com</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="big">Cyrus Adibian</div>
+      <div class="inner">
+        <span>© 2026 Cyrus Adibian</span>
+        <div class="links">
+          <a href="https://github.com/CyrusAdibian" target="_blank" rel="noopener">GitHub</a>
+          <a href="mailto:cyrusadibian@gmail.com">Email</a>
+          <a href="#top">Back to top <span class="material-symbols-outlined" aria-hidden="true" style="font-size:13px; vertical-align:-2px;">arrow_upward</span></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal" id="contact-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-card">
+      <button class="modal-close" type="button" data-modal-close aria-label="Close">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <h3 id="modal-title">What do you <span class="serif">want?</span></h3>
+      <p class="modal-sub">Tell me about your project — I'll get back to you as soon as I can.</p>
+      <form id="contact-form" novalidate>
+        <div class="field">
+          <label for="f-name">Name</label>
+          <input id="f-name" name="name" type="text" placeholder="Your name" required>
+        </div>
+        <div class="field">
+          <label for="f-email">Email</label>
+          <input id="f-email" name="email" type="email" placeholder="you@example.com" required>
+        </div>
+        <div class="field">
+          <label for="f-message">What do you want?</label>
+          <textarea id="f-message" name="message" rows="4" placeholder="I'm looking for…" required></textarea>
+        </div>
+        <button class="submit-btn" type="submit"><span class="material-symbols-outlined" aria-hidden="true">send</span>Send message</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const toggleBtn = document.getElementById("theme-toggle");
+    const saved = localStorage.getItem("theme");
+    if (saved === "dark" || saved === "light") {
+      document.documentElement.setAttribute("data-theme", saved);
+    }
+    const themeIcon = document.getElementById("theme-icon");
+    const setIcon = () => {
+      const dark = document.documentElement.getAttribute("data-theme") === "dark";
+      themeIcon.textContent = dark ? "light_mode" : "dark_mode";
+    };
+    setIcon();
+    toggleBtn.addEventListener("click", () => {
+      const dark = document.documentElement.getAttribute("data-theme") === "dark";
+      document.documentElement.setAttribute("data-theme", dark ? "light" : "dark");
+      localStorage.setItem("theme", dark ? "light" : "dark");
+      setIcon();
+    });
+
+    const modal = document.getElementById("contact-modal");
+    const openModal = () => modal.classList.add("open");
+    const closeModal = () => modal.classList.remove("open");
+    document.querySelectorAll("[data-modal-open]").forEach((b) => b.addEventListener("click", openModal));
+    document.querySelectorAll("[data-modal-close]").forEach((b) => b.addEventListener("click", closeModal));
+    modal.addEventListener("click", (e) => { if (e.target === modal) closeModal(); });
+    addEventListener("keydown", (e) => { if (e.key === "Escape") closeModal(); });
+
+    document.getElementById("contact-form").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const f = new FormData(e.target);
+      const name = (f.get("name") || "").trim();
+      const email = (f.get("email") || "").trim();
+      const message = (f.get("message") || "").trim();
+      const subject = encodeURIComponent(`Portfolio contact from ${name}`);
+      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nWhat I want:\n${message}`);
+      closeModal();
+      window.location.href = `mailto:cyrusadibian@gmail.com?subject=${subject}&body=${body}`;
+    });
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          setTimeout(() => { entry.target.style.transitionDelay = "0s"; }, 900);
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll(".reveal").forEach((el, i) => {
+      el.style.transitionDelay = (i % 6) * 0.07 + "s";
+      io.observe(el);
+    });
+
+    const progress = document.getElementById("progress");
+    addEventListener("scroll", () => {
+      const h = document.documentElement;
+      const scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+      progress.style.width = (scrolled * 100) + "%";
+    }, { passive: true });
+
+    const sections = document.querySelectorAll("main section[id]");
+    const navLinks = document.querySelectorAll("nav .link");
+    const spy = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          navLinks.forEach((l) => l.classList.toggle("active", l.getAttribute("href") === `#${entry.target.id}`));
+        }
+      });
+    }, { rootMargin: "-40% 0px -55% 0px" });
+    sections.forEach((s) => spy.observe(s));
+
+    const statNums = document.querySelectorAll(".stat .num");
+    const countObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        countObserver.unobserve(entry.target);
+        const el = entry.target;
+        const raw = el.textContent.trim();
+        const target = parseInt(raw.replace(/[^0-9]/g, ""), 10) || 0;
+        const suffix = raw.replace(/[0-9]/g, "");
+        const duration = 1200;
+        const start = performance.now();
+        const ease = (t) => 1 - Math.pow(1 - t, 3);
+        const frame = (now) => {
+          const p = Math.min((now - start) / duration, 1);
+          const val = Math.round(ease(p) * target);
+          el.textContent = (p >= 1 ? target : val).toString().padStart(2, "0") + suffix;
+          if (p < 1) requestAnimationFrame(frame);
+        };
+        requestAnimationFrame(frame);
+      });
+    }, { threshold: 0.6 });
+    statNums.forEach((n) => countObserver.observe(n));
+  </script>
 </body>
 </html>
